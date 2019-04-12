@@ -1,5 +1,5 @@
 //
-//  Soldier.swift
+//  Predator.swift
 //  BoardGame
 //
 //  Created by Yuri Chervonyi on 4/12/19.
@@ -8,18 +8,18 @@
 
 import Foundation
 
-class Soldier : Figure {
+class Predator : Figure {
     
     override init() {
         super.init()
         
-        cost = 10
+        cost = 4
         
         ableToMove = true
         ableToFight = true
         
-        blackFigureIcon = "soldier_b"
-        redFigureIcon = "soldier_r"
+        blackFigureIcon = "predator_b"
+        redFigureIcon = "predator_r"
     }
     
     override func getAvailableCellsToMove(from position: Int) -> [Int] {

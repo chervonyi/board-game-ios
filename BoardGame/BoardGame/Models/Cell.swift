@@ -18,8 +18,22 @@ class Cell {
     
     var occupation: Figure?
     
+    var isFree: Bool {
+        return owner == nil
+    }
+    
     init(id : Int) {
         self.id = id
         isHighlighted = false
+    }
+    
+    func set(figure: Figure, owner: Game.PlayerState) {
+        self.occupation = figure
+        self.owner = owner
+    }
+    
+    func reset() {
+        self.occupation = nil
+        self.owner = nil
     }
 }

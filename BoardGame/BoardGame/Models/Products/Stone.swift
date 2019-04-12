@@ -1,5 +1,5 @@
 //
-//  Soldier.swift
+//  Stone.swift
 //  BoardGame
 //
 //  Created by Yuri Chervonyi on 4/12/19.
@@ -8,18 +8,18 @@
 
 import Foundation
 
-class Soldier : Figure {
+class Stone : Figure {
     
     override init() {
         super.init()
         
-        cost = 10
+        cost = 6
         
         ableToMove = true
         ableToFight = true
         
-        blackFigureIcon = "soldier_b"
-        redFigureIcon = "soldier_r"
+        blackFigureIcon = "stone_b"
+        redFigureIcon = "stone_r"
     }
     
     override func getAvailableCellsToMove(from position: Int) -> [Int] {

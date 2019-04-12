@@ -10,6 +10,10 @@ import Foundation
 
 class  Figure {
     
+    enum Kind {
+        case Source, Soldier, Master, Stone, Predator
+    }
+    
     var cost: Int! = nil
     
     var ableToMove: Bool! = nil

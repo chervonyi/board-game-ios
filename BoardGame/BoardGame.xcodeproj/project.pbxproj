@@ -18,6 +18,11 @@
 		DA756CED2260F4C10025D3CF /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CEC2260F4C10025D3CF /* Cell.swift */; };
 		DA756CF12260FB730025D3CF /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CF02260FB730025D3CF /* Figure.swift */; };
 		DA756CF32260FCB10025D3CF /* Soldier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CF22260FCB10025D3CF /* Soldier.swift */; };
+		DA756CF5226124EB0025D3CF /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CF4226124EB0025D3CF /* Base.swift */; };
+		DA756CF722612ABA0025D3CF /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CF622612ABA0025D3CF /* Source.swift */; };
+		DA756CF922612AF70025D3CF /* Stone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CF822612AF70025D3CF /* Stone.swift */; };
+		DA756CFB22612B1A0025D3CF /* Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CFA22612B1A0025D3CF /* Master.swift */; };
+		DA756CFD22612B460025D3CF /* Predator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CFC22612B460025D3CF /* Predator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,11 @@
 		DA756CEC2260F4C10025D3CF /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		DA756CF02260FB730025D3CF /* Figure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
 		DA756CF22260FCB10025D3CF /* Soldier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soldier.swift; sourceTree = "<group>"; };
+		DA756CF4226124EB0025D3CF /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		DA756CF622612ABA0025D3CF /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		DA756CF822612AF70025D3CF /* Stone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stone.swift; sourceTree = "<group>"; };
+		DA756CFA22612B1A0025D3CF /* Master.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Master.swift; sourceTree = "<group>"; };
+		DA756CFC22612B460025D3CF /* Predator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +140,7 @@
 				DA756CEE2260FB5C0025D3CF /* Products */,
 				DA756CEA2260F4610025D3CF /* Game.swift */,
 				DA756CEC2260F4C10025D3CF /* Cell.swift */,
+				DA756CF4226124EB0025D3CF /* Base.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -139,6 +150,10 @@
 			children = (
 				DA756CF02260FB730025D3CF /* Figure.swift */,
 				DA756CF22260FCB10025D3CF /* Soldier.swift */,
+				DA756CF622612ABA0025D3CF /* Source.swift */,
+				DA756CF822612AF70025D3CF /* Stone.swift */,
+				DA756CFA22612B1A0025D3CF /* Master.swift */,
+				DA756CFC22612B460025D3CF /* Predator.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -246,10 +261,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA756CF5226124EB0025D3CF /* Base.swift in Sources */,
 				DA756CF32260FCB10025D3CF /* Soldier.swift in Sources */,
 				DA0A05DF225FAE0B00FAA30D /* BoardViewController.swift in Sources */,
+				DA756CFB22612B1A0025D3CF /* Master.swift in Sources */,
 				DA0A05DD225FAE0B00FAA30D /* AppDelegate.swift in Sources */,
 				DA756CED2260F4C10025D3CF /* Cell.swift in Sources */,
+				DA756CFD22612B460025D3CF /* Predator.swift in Sources */,
+				DA756CF922612AF70025D3CF /* Stone.swift in Sources */,
+				DA756CF722612ABA0025D3CF /* Source.swift in Sources */,
 				DA0A0601225FC04300FAA30D /* CellView.swift in Sources */,
 				DA756CEB2260F4610025D3CF /* Game.swift in Sources */,
 				DA756CF12260FB730025D3CF /* Figure.swift in Sources */,
