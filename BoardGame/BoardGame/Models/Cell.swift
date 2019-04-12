@@ -18,10 +18,15 @@ class Cell {
     
     var occupation: Figure?
     
-    var isFree: Bool {
+    var isEmpty: Bool {
         return owner == nil
     }
     
+    var availabelCellsToMove: [Int] {
+        return occupation!.getAvailableCellsToMove(from: id)
+    }
+    
+    // CONSTRUCTOR
     init(id : Int) {
         self.id = id
         isHighlighted = false
@@ -36,4 +41,30 @@ class Cell {
         self.occupation = nil
         self.owner = nil
     }
+    
+    static func isExist(_ position: Int) -> Bool {
+        return !(position < 0 || position >= Game.CELLS)
+    }
+    
+    static func isExist(_ x: Int, _ y: Int) -> Bool {
+        return !(x < 0 || y < 0 || x >= Game.COLUMNS || y >= Game.ROWS)
+    }
+    
+    static func getXY(from position: Int) -> (Int, Int) {
+    
+        let y = position / Game.COLUMNS
+        let x = position - Game.COLUMNS * y
+    
+        return (x, y)
+    }
+    
+    static func getPosition(_ x: Int, _ y: Int) -> Int {
+        
+        var position = Game.COLUMNS * y
+        position += x
+        
+        return position
+    }
+    
+    
 }

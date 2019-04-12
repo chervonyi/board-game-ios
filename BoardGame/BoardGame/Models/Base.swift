@@ -35,7 +35,7 @@ class Base {
         var freeCells = [Int]()
     
         for i in from...to {
-            if board[i].isFree {
+            if board[i].isEmpty {
                 freeCells.append(i)
             }
         }

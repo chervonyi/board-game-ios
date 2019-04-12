@@ -38,12 +38,17 @@ class CellView: UIView {
         layer.borderWidth = 2
         layer.borderColor = #colorLiteral(red: 0.8784313725, green: 0.8784313725, blue: 0.8784313725, alpha: 1)
         layer.backgroundColor = #colorLiteral(red: 0.9725490196, green: 0.9725490196, blue: 0.9725490196, alpha: 1)
-    
+        
         // Replace image into this view
         imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         imageView.bounds = imageView.frame.insetBy(dx: 9, dy: 9)
         addSubview(imageView)
     }
     
+    func setHighlight(backgroundColor: CGColor, borderColor: CGColor) {
+        layer.borderColor = borderColor
+        layer.backgroundColor = backgroundColor
+    }
+   
 
 }

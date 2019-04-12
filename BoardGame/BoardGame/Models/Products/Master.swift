@@ -24,7 +24,25 @@ class Master : Figure {
     }
     
     override func getAvailableCellsToMove(from position: Int) -> [Int] {
+        guard Cell.isExist(position) else { return [Int]() }
         
-        return [Int]()
+        var availabelCells = [Int]()
+        
+        let (x, y) = Cell.getXY(from: position)
+        
+        let minX = x - 2
+        let maxX = x + 2
+        let minY = y - 2
+        let maxY = y + 2
+        
+        for _y in minY...maxY {
+            for _x in minX...maxX {
+                if Cell.isExist(_x, _y) && x != _x && y != _y {
+                    availabelCells.append(Cell.getPosition(_x, _y))
+                }
+            }
+        }
+        
+        return availabelCells
     }
 }

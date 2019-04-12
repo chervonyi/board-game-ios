@@ -24,6 +24,24 @@ class Stone : Figure {
     
     override func getAvailableCellsToMove(from position: Int) -> [Int] {
         
-        return [Int]()
+        guard Cell.isExist(position) else { return [Int]() }
+        
+        var availabelCells = [Int]()
+        
+        let (x, y) = Cell.getXY(from: position)
+        
+        let arrayX = [x, x, x - 1, x + 1]
+        let arrayY = [y - 1, y + 1, y, y]
+        
+        for i in 0..<arrayX.count {
+            let tmpX = arrayX[i]
+            let tmpY = arrayY[i]
+            
+            if (Cell.isExist(tmpX, tmpY)) {
+                availabelCells.append(Cell.getPosition(tmpX, tmpY))
+            }
+        }
+        
+        return availabelCells
     }
 }

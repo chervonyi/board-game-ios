@@ -22,7 +22,7 @@ class Game {
     static let BASE_SIZE = 3
     
     // VARS
-    var board = [Cell]()
+    private(set) var board = [Cell]()
     
     var bases = [PlayerState.ALLIANCE : Base(owner: PlayerState.ALLIANCE, sizeOfBase: Game.BASE_SIZE),
                  PlayerState.ENEMY : Base(owner: PlayerState.ENEMY, sizeOfBase: Game.BASE_SIZE)]
@@ -31,7 +31,22 @@ class Game {
     
     var selectedCell: Int {
         set {
+            let cell = board[newValue]
             
+            for cell in board {
+                cell.isHighlighted = false
+            }
+            
+            if cell.isEmpty {
+                _selectedCell = -1
+            } else {
+                _selectedCell = newValue
+                
+                for cellId in cell.availabelCellsToMove {
+                    board[cellId].isHighlighted = true
+                }
+                
+            }
         }
         
         get {
@@ -39,11 +54,15 @@ class Game {
         }
     }
     
+    // CONSTRUCTOR
     init() {
-        
+    
+        // Fill up board with instances of Cell
         for i in 0..<Game.CELLS {
             board.append(Cell(id: i))
         }
+        
+        locateStartPieces()
     }
     
     private func locateStartPieces() {
@@ -82,7 +101,5 @@ class Game {
             
             board[freePosition].set(figure: figure, owner: owner)
         }
-        
     }
-    
 }
