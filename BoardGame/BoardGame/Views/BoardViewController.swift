@@ -19,6 +19,7 @@ class BoardViewController: UIViewController {
         
         // sort outlet collection (cells)
         //cells = cells.sorted(by: {$0.tag < $1.tag})
+       
     }
 
     private func addListeners() {
