@@ -13,6 +13,7 @@
 		DA0A05E4225FAE0B00FAA30D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0A05E3225FAE0B00FAA30D /* Assets.xcassets */; };
 		DA0A05E7225FAE0B00FAA30D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0A05E5225FAE0B00FAA30D /* LaunchScreen.storyboard */; };
 		DA0A05F2225FAE0B00FAA30D /* BoardGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A05F1225FAE0B00FAA30D /* BoardGameTests.swift */; };
+		DA0A0601225FC04300FAA30D /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A0600225FC04300FAA30D /* CellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DA0A05ED225FAE0B00FAA30D /* BoardGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoardGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0A05F1225FAE0B00FAA30D /* BoardGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameTests.swift; sourceTree = "<group>"; };
 		DA0A05F3225FAE0B00FAA30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA0A0600225FC04300FAA30D /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				DA0A05FC225FB43000FAA30D /* Views */,
-				DA0A05DC225FAE0B00FAA30D /* AppDelegate.swift */,
+				DA0A05FD225FB6BF00FAA30D /* Supporting files */,
 				DA0A05E0225FAE0B00FAA30D /* Main.storyboard */,
-				DA0A05E3225FAE0B00FAA30D /* Assets.xcassets */,
-				DA0A05E5225FAE0B00FAA30D /* LaunchScreen.storyboard */,
 				DA0A05E8225FAE0B00FAA30D /* Info.plist */,
 			);
 			path = BoardGame;
@@ -100,8 +100,19 @@
 			isa = PBXGroup;
 			children = (
 				DA0A05DE225FAE0B00FAA30D /* BoardViewController.swift */,
+				DA0A0600225FC04300FAA30D /* CellView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DA0A05FD225FB6BF00FAA30D /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				DA0A05DC225FAE0B00FAA30D /* AppDelegate.swift */,
+				DA0A05E3225FAE0B00FAA30D /* Assets.xcassets */,
+				DA0A05E5225FAE0B00FAA30D /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 			files = (
 				DA0A05DF225FAE0B00FAA30D /* BoardViewController.swift in Sources */,
 				DA0A05DD225FAE0B00FAA30D /* AppDelegate.swift in Sources */,
+				DA0A0601225FC04300FAA30D /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
