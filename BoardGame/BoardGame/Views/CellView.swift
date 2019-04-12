@@ -32,9 +32,9 @@ class CellView: UIView {
         
         
         // Image:
-//        let imageView = UIImageView(image: image)
+        let imageView = UIImageView(image: image)
 //        imageView.bounds = imageView.frame.insetBy(dx: 10, dy: 10)
-//        addSubview(imageView)
+        addSubview(imageView)
         
         
     }
