@@ -37,7 +37,7 @@ class Soldier : Figure {
         
         for _y in minY...maxY {
             for _x in minX...maxX {
-                if Cell.isExist(_x, _y) && x != _x && y != _y {
+                if Cell.isExist(_x, _y) && !(x == _x && y == _y) {
                     availabelCells.append(Cell.getPosition(_x, _y))
                 }
             }

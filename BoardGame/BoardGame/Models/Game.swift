@@ -33,13 +33,11 @@ class Game {
         set {
             let cell = board[newValue]
             
-            for cell in board {
-                cell.isHighlighted = false
-            }
+            removeAnySelection()
             
-            if cell.isEmpty {
-                _selectedCell = -1
-            } else {
+            
+            
+            if !cell.isEmpty && cell.occupation!.ableToMove && cell.owner == PlayerState.ALLIANCE {
                 _selectedCell = newValue
                 
                 for cellId in cell.availabelCellsToMove {
@@ -52,6 +50,14 @@ class Game {
         get {
             return _selectedCell
         }
+    }
+    
+    private func removeAnySelection() {
+        for cell in board {
+            cell.isHighlighted = false
+        }
+        
+        _selectedCell = -1
     }
     
     // CONSTRUCTOR
