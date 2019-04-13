@@ -20,6 +20,7 @@ class Predator : Figure {
         
         blackFigureIcon = "predator_b"
         redFigureIcon = "predator_r"
+        shopView = "predator_shop"
     }
     
     override func getAvailableCellsToMove(from position: Int) -> [Int] {

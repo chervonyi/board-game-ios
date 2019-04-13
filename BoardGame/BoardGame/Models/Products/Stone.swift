@@ -20,6 +20,7 @@ class Stone : Figure {
         
         blackFigureIcon = "stone_b"
         redFigureIcon = "stone_r"
+        shopView = "stone_shop"
     }
     
     override func getAvailableCellsToMove(from position: Int) -> [Int] {

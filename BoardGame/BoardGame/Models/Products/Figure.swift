@@ -10,7 +10,7 @@ import Foundation
 
 class  Figure : Product {
     
-    enum Kind {
+    enum Figures {
         case Source, Soldier, Master, Stone, Predator
     }
     

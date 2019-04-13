@@ -132,14 +132,14 @@ class Game {
     }
     
     private func locateStartPieces() {
-        let set: [Figure.Kind] = [Figure.Kind.Source, .Stone, .Stone, .Soldier]
+        let set: [Figure.Figures] = [Figure.Figures.Source, .Stone, .Stone, .Soldier]
         
         locate(set: set, owner: PlayerState.ALLIANCE)
         locate(set: set, owner: PlayerState.ENEMY)
     }
     
     // Locate given list of figures at random cells on appropriate base
-    private func locate(set: [Figure.Kind], owner: PlayerState) {
+    private func locate(set: [Figure.Figures], owner: PlayerState) {
         
         for kind in set {
             guard let freePosition = bases[owner]?.getRandomFreeCell(board: board) else {
@@ -149,7 +149,7 @@ class Game {
             var figure: Figure
             
             switch kind {
-            case Figure.Kind.Source:
+            case Figure.Figures.Source:
                 figure = Source()
                 
             case .Soldier:

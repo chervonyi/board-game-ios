@@ -10,6 +10,11 @@ import Foundation
 
 class Product {
     
+    enum Kind {
+        case Source, Soldier, Master, Stone, Predator
+        //case Adverisement, KillRandomFigure, CreateRandomFigure // TODO - finish this list
+    }
+    
     var cost: Int! = nil
     
     var shopView: String! = nil

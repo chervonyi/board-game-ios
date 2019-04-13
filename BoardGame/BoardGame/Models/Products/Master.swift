@@ -21,6 +21,7 @@ class Master : Figure {
         
         blackFigureIcon = "master_b"
         redFigureIcon = "master_r"
+        shopView = "master_shop"
     }
     
     override func getAvailableCellsToMove(from position: Int) -> [Int] {
