@@ -17,6 +17,10 @@ class BoardViewController: UIViewController {
 
     @IBOutlet var cells: [CellView]!
     
+    @IBOutlet var products: [ProductView]!
+    
+    @IBOutlet var prices: [UILabel]!
+    
     private var game = Game()
     
     override func viewDidLoad() {
@@ -26,12 +30,30 @@ class BoardViewController: UIViewController {
         
         // Sort outlet collection (cells)
         cells = cells.sorted(by: {$0.tag < $1.tag})
-       
+        products = products.sorted(by: {$0.tag < $1.tag})
+        prices = prices.sorted(by: {$0.tag < $1.tag})
+        
         updateBoardView()
         
         game.delegate = self
     }
 
+    
+    @objc func selectCell(sender: UITapGestureRecognizer) {
+        let tag = sender.view?.tag
+        game.selectedCell = tag!
+        updateBoardView()
+    }
+    
+    @objc func selectProduct(sender: UITapGestureRecognizer) {
+        let tag = sender.view?.tag
+        print(tag!)
+        // TODO - game.selectedProduct = tag!
+        // updateBoardView()
+        // updateShopView()
+    }
+    
+    
     func updateBoardView() {
         for cellView in cells {
             
@@ -63,21 +85,18 @@ class BoardViewController: UIViewController {
         }
     }
     
-    
     private func addListeners() {
         for cell in cells {
             let gesture = UITapGestureRecognizer(target: self, action: #selector(BoardViewController.selectCell))
             cell.addGestureRecognizer(gesture)
         }
+        
+        for product in products {
+            let gesture = UITapGestureRecognizer(target: self, action: #selector(BoardViewController.selectProduct))
+            product.addGestureRecognizer(gesture)
+        }
     }
     
-    @objc func selectCell(sender: UITapGestureRecognizer) {
-        let tag = sender.view?.tag
-        
-        game.selectedCell = tag!
-        
-        updateBoardView()
-    }
 }
 
 

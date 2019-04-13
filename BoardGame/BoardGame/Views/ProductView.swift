@@ -1,15 +1,15 @@
 //
-//  CellView.swift
+//  ProductView.swift
 //  BoardGame
 //
-//  Created by Yuri Chervonyi on 4/11/19.
+//  Created by Yuri Chervonyi on 4/13/19.
 //  Copyright © 2019 CHRGames. All rights reserved.
 //
 
 import UIKit
 
-class CellView: UIView {
-    
+class ProductView: UIView {
+
     private var imageView: UIImageView!
     
     var image: UIImage? {
@@ -18,6 +18,21 @@ class CellView: UIView {
         }
         get {
             return imageView.image!
+        }
+    }
+    
+    var isHighlighted: Bool {
+        set {
+            if newValue {
+                layer.borderWidth = 2
+                layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            } else {
+                layer.borderWidth = 0
+            }
+        }
+        
+        get {
+            return layer.borderWidth != 0
         }
     }
     
@@ -34,20 +49,12 @@ class CellView: UIView {
     func commonInit() {
         
         layer.cornerRadius = 10
-        layer.borderWidth = 2
-        layer.borderColor = #colorLiteral(red: 0.8784313725, green: 0.8784313725, blue: 0.8784313725, alpha: 1)
-        layer.backgroundColor = #colorLiteral(red: 0.9725490196, green: 0.9725490196, blue: 0.9725490196, alpha: 1)
+        
+        layer.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         // Replace image into this view
         imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        imageView.bounds = imageView.frame.insetBy(dx: 9, dy: 9)
+        //imageView.bounds = imageView.frame.insetBy(dx: 9, dy: 9)
         addSubview(imageView)
     }
-    
-    func setHighlight(backgroundColor: CGColor, borderColor: CGColor) {
-        layer.borderColor = borderColor
-        layer.backgroundColor = backgroundColor
-    }
-   
-
 }

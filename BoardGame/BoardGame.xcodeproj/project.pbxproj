@@ -14,6 +14,9 @@
 		DA0A05E7225FAE0B00FAA30D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0A05E5225FAE0B00FAA30D /* LaunchScreen.storyboard */; };
 		DA0A05F2225FAE0B00FAA30D /* BoardGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A05F1225FAE0B00FAA30D /* BoardGameTests.swift */; };
 		DA0A0601225FC04300FAA30D /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0A0600225FC04300FAA30D /* CellView.swift */; };
+		DA2D1E17226240C4000558C4 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E16226240C4000558C4 /* ProductView.swift */; };
+		DA2D1E192262559B000558C4 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E182262559B000558C4 /* Shop.swift */; };
+		DA2D1E1B226255BE000558C4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E1A226255BE000558C4 /* Product.swift */; };
 		DA756CEB2260F4610025D3CF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CEA2260F4610025D3CF /* Game.swift */; };
 		DA756CED2260F4C10025D3CF /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CEC2260F4C10025D3CF /* Cell.swift */; };
 		DA756CF12260FB730025D3CF /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CF02260FB730025D3CF /* Figure.swift */; };
@@ -49,6 +52,9 @@
 		DA0A05F1225FAE0B00FAA30D /* BoardGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameTests.swift; sourceTree = "<group>"; };
 		DA0A05F3225FAE0B00FAA30D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA0A0600225FC04300FAA30D /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		DA2D1E16226240C4000558C4 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		DA2D1E182262559B000558C4 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		DA2D1E1A226255BE000558C4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		DA756CEA2260F4610025D3CF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		DA756CEC2260F4C10025D3CF /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		DA756CF02260FB730025D3CF /* Figure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
@@ -124,6 +130,7 @@
 			children = (
 				DA0A05DE225FAE0B00FAA30D /* BoardViewController.swift */,
 				DA0A0600225FC04300FAA30D /* CellView.swift */,
+				DA2D1E16226240C4000558C4 /* ProductView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +154,7 @@
 				DA756CF4226124EB0025D3CF /* Base.swift */,
 				DA756CFE22617E760025D3CF /* Bot.swift */,
 				DA756D002261802D0025D3CF /* Move.swift */,
+				DA2D1E182262559B000558C4 /* Shop.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,6 +168,7 @@
 				DA756CF822612AF70025D3CF /* Stone.swift */,
 				DA756CFA22612B1A0025D3CF /* Master.swift */,
 				DA756CFC22612B460025D3CF /* Predator.swift */,
+				DA2D1E1A226255BE000558C4 /* Product.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -272,15 +281,18 @@
 				DA756CF32260FCB10025D3CF /* Soldier.swift in Sources */,
 				DA756CFF22617E760025D3CF /* Bot.swift in Sources */,
 				DA0A05DF225FAE0B00FAA30D /* BoardViewController.swift in Sources */,
+				DA2D1E1B226255BE000558C4 /* Product.swift in Sources */,
 				DA756CFB22612B1A0025D3CF /* Master.swift in Sources */,
 				DA0A05DD225FAE0B00FAA30D /* AppDelegate.swift in Sources */,
 				DA756CED2260F4C10025D3CF /* Cell.swift in Sources */,
 				DA756CFD22612B460025D3CF /* Predator.swift in Sources */,
 				DA756CF922612AF70025D3CF /* Stone.swift in Sources */,
+				DA2D1E17226240C4000558C4 /* ProductView.swift in Sources */,
 				DA756CF722612ABA0025D3CF /* Source.swift in Sources */,
 				DA0A0601225FC04300FAA30D /* CellView.swift in Sources */,
 				DA756CEB2260F4610025D3CF /* Game.swift in Sources */,
 				DA756CF12260FB730025D3CF /* Figure.swift in Sources */,
+				DA2D1E192262559B000558C4 /* Shop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

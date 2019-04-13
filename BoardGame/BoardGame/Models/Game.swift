@@ -23,6 +23,7 @@ class Game {
     // VARS:
     private(set) var board = [Cell]()
     private var _selectedCell = -1
+    private var _selectedProduct = -1
     private var turn = PlayerState.ALLIANCE
     private var bot = Bot()
     weak var delegate: GameDelegate?
@@ -64,6 +65,27 @@ class Game {
         }
     }
     
+    var selectedProduct: Int {
+        set {
+            
+        }
+        get {
+            return _selectedProduct
+        }
+    }
+    
+    
+    
+    // CONSTRUCTOR
+    init() {
+        // Fill up board with instances of Cell
+        for i in 0..<Game.CELLS {
+            board.append(Cell(id: i))
+        }
+        
+        locateStartPieces()
+    }
+    
     private func move(from: Int, to: Int) {
         guard Cell.isExist(from) && Cell.isExist(to) else { return }
         
@@ -83,24 +105,6 @@ class Game {
         endTurn()
     }
     
-    private func removeAnySelection() {
-        for cell in board {
-            cell.isHighlighted = false
-        }
-        
-        _selectedCell = -1
-    }
-    
-    // CONSTRUCTOR
-    init() {
-        // Fill up board with instances of Cell
-        for i in 0..<Game.CELLS {
-            board.append(Cell(id: i))
-        }
-        
-        locateStartPieces()
-    }
-    
     private func makeBotMove() {
         let botMove = bot.getMove(board: board)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
@@ -116,6 +120,15 @@ class Game {
             delegate?.updateBoard()
             turn = .ALLIANCE
         }
+    }
+    
+    private func removeAnySelection() {
+        for cell in board {
+            cell.isHighlighted = false
+        }
+        
+        
+        _selectedCell = -1
     }
     
     private func locateStartPieces() {

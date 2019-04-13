@@ -8,13 +8,11 @@
 
 import Foundation
 
-class  Figure {
+class  Figure : Product {
     
     enum Kind {
         case Source, Soldier, Master, Stone, Predator
     }
-    
-    var cost: Int! = nil
     
     var ableToMove: Bool! = nil
     

@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lc-DK-CEh">
-                                <rect key="frame" x="330.66666666666669" y="54" width="34.333333333333314" height="0.0"/>
+                                <rect key="frame" x="330.66666666666669" y="54" width="34.333333333333314" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,41 +32,41 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="xCP-Bq-gIP">
-                                <rect key="frame" x="56.666666666666657" y="84" width="262" height="524"/>
+                                <rect key="frame" x="46" y="93" width="283.66666666666669" height="567"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ymN-dq-zjU">
-                                        <rect key="frame" x="0.0" y="0.0" width="262" height="49.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="283.66666666666669" height="54"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqW-gC-lhV" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="49.333333333333336" height="49.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="54.333333333333336" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="aqW-gC-lhV" secondAttribute="height" multiplier="1:1" id="sI0-kq-uJp"/>
                                                 </constraints>
                                             </view>
                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBd-cW-Vgm" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="49.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="58" y="0.0" width="53.333333333333343" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="EBd-cW-Vgm" secondAttribute="height" multiplier="1:1" id="kZl-4S-z5W"/>
                                                 </constraints>
                                             </view>
                                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xx9-Tu-eSp" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="106.00000000000001" y="0.0" width="49.666666666666671" height="49.666666666666664"/>
+                                                <rect key="frame" x="115" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="xx9-Tu-eSp" secondAttribute="height" multiplier="1:1" id="cbA-lA-pft"/>
                                                 </constraints>
                                             </view>
                                             <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKk-ec-QhP" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="159.33333333333334" y="0.0" width="49.666666666666657" height="49.666666666666664"/>
+                                                <rect key="frame" x="172.33333333333334" y="0.0" width="53.666666666666657" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="oKk-ec-QhP" secondAttribute="height" multiplier="1:1" id="B6p-B7-QoR"/>
                                                 </constraints>
                                             </view>
                                             <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zze-gg-YyI" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="212.66666666666666" y="0.0" width="49.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="229.66666666666669" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="zze-gg-YyI" secondAttribute="height" multiplier="1:1" id="kwq-oP-Q9X"/>
@@ -75,38 +75,38 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="8eD-4q-uiZ">
-                                        <rect key="frame" x="0.0" y="52.666666666666657" width="262" height="49.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="57" width="283.66666666666669" height="54"/>
                                         <subviews>
                                             <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ef-pi-Z0c" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="49.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="3Ef-pi-Z0c" secondAttribute="height" multiplier="1:1" id="UY5-u9-1fF"/>
                                                 </constraints>
                                             </view>
                                             <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTV-l1-Qum" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="50.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="57.333333333333329" y="0.0" width="54.333333333333329" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="BTV-l1-Qum" secondAttribute="height" multiplier="1:1" id="vwQ-ou-iYr"/>
                                                 </constraints>
                                             </view>
                                             <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCv-qO-6PX" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="106.33333333333334" y="0.0" width="50" height="49.666666666666664"/>
+                                                <rect key="frame" x="115" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="sCv-qO-6PX" secondAttribute="height" multiplier="1:1" id="Sue-PV-WdC"/>
                                                 </constraints>
                                             </view>
                                             <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fay-Gq-uEH" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="159.33333333333334" y="0.0" width="50" height="49.666666666666664"/>
+                                                <rect key="frame" x="172" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="fay-Gq-uEH" secondAttribute="height" multiplier="1:1" id="EoA-tt-f9a"/>
                                                 </constraints>
                                             </view>
                                             <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4D-bV-UTf" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="212.33333333333334" y="0.0" width="49.666666666666657" height="49.666666666666664"/>
+                                                <rect key="frame" x="229.33333333333334" y="0.0" width="54.333333333333343" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="q4D-bV-UTf" secondAttribute="height" multiplier="1:1" id="1qN-Sj-dJY"/>
@@ -115,38 +115,38 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ezN-p2-DW5">
-                                        <rect key="frame" x="0.0" y="105.33333333333336" width="262" height="49.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="114" width="283.66666666666669" height="54"/>
                                         <subviews>
                                             <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jg5-bw-WxL" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="49.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="54.666666666666664" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Jg5-bw-WxL" secondAttribute="height" multiplier="1:1" id="tRu-QF-LrA"/>
                                                 </constraints>
                                             </view>
                                             <view tag="11" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7J-Nn-zbq" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="53.000000000000014" y="0.0" width="49.666666666666671" height="49.666666666666664"/>
+                                                <rect key="frame" x="58" y="0.0" width="53.666666666666657" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="C7J-Nn-zbq" secondAttribute="height" multiplier="1:1" id="2KQ-Hf-0Lg"/>
                                                 </constraints>
                                             </view>
                                             <view tag="12" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85s-NP-LwM" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="106.00000000000001" y="0.0" width="49.666666666666671" height="49.666666666666664"/>
+                                                <rect key="frame" x="115.00000000000001" y="0.0" width="53.666666666666671" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="85s-NP-LwM" secondAttribute="height" multiplier="1:1" id="krb-B7-zDQ"/>
                                                 </constraints>
                                             </view>
                                             <view tag="13" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pw4-og-mge" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="159" y="0.0" width="50" height="49.666666666666664"/>
+                                                <rect key="frame" x="172" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Pw4-og-mge" secondAttribute="height" multiplier="1:1" id="0Lo-pG-76j"/>
                                                 </constraints>
                                             </view>
                                             <view tag="14" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Sa-Vb-rAo" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="212.33333333333334" y="0.0" width="49.666666666666657" height="49.666666666666664"/>
+                                                <rect key="frame" x="229.33333333333334" y="0.0" width="54.333333333333343" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="1Sa-Vb-rAo" secondAttribute="height" multiplier="1:1" id="4sx-hp-Unl"/>
@@ -155,38 +155,38 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="BBD-tn-cUJ">
-                                        <rect key="frame" x="0.0" y="158" width="262" height="49.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="171" width="283.66666666666669" height="54"/>
                                         <subviews>
                                             <view tag="15" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3T-cV-uj2" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="49.333333333333336" height="49.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="54.333333333333336" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="l3T-cV-uj2" secondAttribute="height" multiplier="1:1" id="YV0-u2-AVc"/>
                                                 </constraints>
                                             </view>
                                             <view tag="16" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t9y-uo-3xD" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="49.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="57.666666666666671" y="0.0" width="54.333333333333329" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="t9y-uo-3xD" secondAttribute="height" multiplier="1:1" id="jqx-qi-fKS"/>
                                                 </constraints>
                                             </view>
                                             <view tag="17" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLP-sQ-baz" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="106.00000000000001" y="0.0" width="49.666666666666671" height="49.666666666666664"/>
+                                                <rect key="frame" x="115.33333333333333" y="0.0" width="54.333333333333329" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="mLP-sQ-baz" secondAttribute="height" multiplier="1:1" id="92P-US-ONT"/>
                                                 </constraints>
                                             </view>
                                             <view tag="18" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSP-EB-7XC" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="159.33333333333334" y="0.0" width="49.666666666666657" height="49.666666666666664"/>
+                                                <rect key="frame" x="172.66666666666666" y="0.0" width="53.666666666666657" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="sSP-EB-7XC" secondAttribute="height" multiplier="1:1" id="C4E-7e-E5U"/>
                                                 </constraints>
                                             </view>
                                             <view tag="19" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7k-wc-CiX" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="212.66666666666666" y="0.0" width="49.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="229.66666666666669" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Q7k-wc-CiX" secondAttribute="height" multiplier="1:1" id="vwB-VJ-WYV"/>
@@ -195,38 +195,38 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="pBe-gK-O9e">
-                                        <rect key="frame" x="0.0" y="210.66666666666669" width="262" height="50"/>
+                                        <rect key="frame" x="0.0" y="228" width="283.66666666666669" height="54"/>
                                         <subviews>
                                             <view tag="20" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pjh-ud-raS" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="49.333333333333336" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Pjh-ud-raS" secondAttribute="height" multiplier="1:1" id="Td8-Xy-Rbb"/>
                                                 </constraints>
                                             </view>
                                             <view tag="21" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40G-9t-JbH" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="49.333333333333343" height="50"/>
+                                                <rect key="frame" x="57.333333333333329" y="0.0" width="53.333333333333329" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="40G-9t-JbH" secondAttribute="height" multiplier="1:1" id="Bj3-Er-10l"/>
                                                 </constraints>
                                             </view>
                                             <view tag="22" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPN-Ar-t7m" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="106.33333333333334" y="0.0" width="49" height="50"/>
+                                                <rect key="frame" x="114.66666666666667" y="0.0" width="53.666666666666671" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="SPN-Ar-t7m" secondAttribute="height" multiplier="1:1" id="3YW-OT-Tdq"/>
                                                 </constraints>
                                             </view>
                                             <view tag="23" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPx-iq-9KH" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="159.33333333333334" y="0.0" width="49.666666666666657" height="50"/>
+                                                <rect key="frame" x="172" y="0.0" width="53.666666666666657" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="mPx-iq-9KH" secondAttribute="height" multiplier="1:1" id="g0v-rm-BAO"/>
                                                 </constraints>
                                             </view>
                                             <view tag="24" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFs-YZ-Mqr" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="212.66666666666666" y="0.0" width="49.333333333333343" height="50"/>
+                                                <rect key="frame" x="229.66666666666669" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="HFs-YZ-Mqr" secondAttribute="height" multiplier="1:1" id="9Ah-Jj-brg"/>
@@ -235,38 +235,38 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="S4V-YQ-iR0">
-                                        <rect key="frame" x="0.0" y="263.66666666666669" width="262" height="49.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="285" width="283.66666666666669" height="54"/>
                                         <subviews>
                                             <view tag="25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZbB-tC-P6w" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="49.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ZbB-tC-P6w" secondAttribute="height" multiplier="1:1" id="NJe-BU-0bi"/>
                                                 </constraints>
                                             </view>
                                             <view tag="26" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8E5-rt-Cgb" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="50.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="57.333333333333329" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="8E5-rt-Cgb" secondAttribute="height" multiplier="1:1" id="BWl-Ld-jdq"/>
                                                 </constraints>
                                             </view>
                                             <view tag="27" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLX-Px-Rc9" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="106.33333333333334" y="0.0" width="50" height="49.666666666666664"/>
+                                                <rect key="frame" x="115" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="BLX-Px-Rc9" secondAttribute="height" multiplier="1:1" id="U45-O7-sr0"/>
                                                 </constraints>
                                             </view>
                                             <view tag="28" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="us6-Lk-pUn" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="159.33333333333334" y="0.0" width="50" height="49.666666666666664"/>
+                                                <rect key="frame" x="172.33333333333334" y="0.0" width="53.666666666666657" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="us6-Lk-pUn" secondAttribute="height" multiplier="1:1" id="60U-EJ-IuH"/>
                                                 </constraints>
                                             </view>
                                             <view tag="29" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhf-aJ-exw" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="212.33333333333334" y="0.0" width="49.666666666666657" height="49.666666666666664"/>
+                                                <rect key="frame" x="229.33333333333334" y="0.0" width="54.333333333333343" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Mhf-aJ-exw" secondAttribute="height" multiplier="1:1" id="pOL-cv-Ku1"/>
@@ -275,38 +275,38 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="n2N-94-70d">
-                                        <rect key="frame" x="0.0" y="316.33333333333331" width="262" height="49.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="342" width="283.66666666666669" height="54"/>
                                         <subviews>
                                             <view tag="30" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThS-Ln-oED" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="49.333333333333336" height="49.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="54.333333333333336" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ThS-Ln-oED" secondAttribute="height" multiplier="1:1" id="HM4-tF-5hJ"/>
                                                 </constraints>
                                             </view>
                                             <view tag="31" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMh-V2-ZVK" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="49.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="57.666666666666671" y="0.0" width="54.333333333333329" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="HMh-V2-ZVK" secondAttribute="height" multiplier="1:1" id="Drw-9E-LA9"/>
                                                 </constraints>
                                             </view>
                                             <view tag="32" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuQ-Qk-gYV" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="106.00000000000001" y="0.0" width="49.666666666666671" height="49.666666666666664"/>
+                                                <rect key="frame" x="115.33333333333333" y="0.0" width="54.333333333333329" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="nuQ-Qk-gYV" secondAttribute="height" multiplier="1:1" id="yeI-iZ-YUx"/>
                                                 </constraints>
                                             </view>
                                             <view tag="33" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXu-cM-d5n" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="159.33333333333334" y="0.0" width="49.666666666666657" height="49.666666666666664"/>
+                                                <rect key="frame" x="172.66666666666666" y="0.0" width="53.666666666666657" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="aXu-cM-d5n" secondAttribute="height" multiplier="1:1" id="Qkl-65-Cux"/>
                                                 </constraints>
                                             </view>
                                             <view tag="34" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etv-jQ-NNH" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="212.66666666666666" y="0.0" width="49.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="229.66666666666669" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="etv-jQ-NNH" secondAttribute="height" multiplier="1:1" id="kcf-Zj-cwY"/>
@@ -315,38 +315,38 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="cGH-cY-lAA">
-                                        <rect key="frame" x="0.0" y="369" width="262" height="49.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="399" width="283.66666666666669" height="54"/>
                                         <subviews>
                                             <view tag="35" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KtO-UA-VRT" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="49.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="KtO-UA-VRT" secondAttribute="height" multiplier="1:1" id="xrL-II-NMg"/>
                                                 </constraints>
                                             </view>
                                             <view tag="36" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zap-kr-Dc0" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="53.000000000000014" y="0.0" width="49.666666666666671" height="49.666666666666664"/>
+                                                <rect key="frame" x="57" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="zap-kr-Dc0" secondAttribute="height" multiplier="1:1" id="vug-Ko-rI8"/>
                                                 </constraints>
                                             </view>
                                             <view tag="37" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="and-mV-UQk" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="106.00000000000001" y="0.0" width="49.666666666666671" height="49.666666666666664"/>
+                                                <rect key="frame" x="114.00000000000001" y="0.0" width="54.666666666666671" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="and-mV-UQk" secondAttribute="height" multiplier="1:1" id="gui-mS-hmO"/>
                                                 </constraints>
                                             </view>
                                             <view tag="38" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8V-N9-8tl" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="159" y="0.0" width="50" height="49.666666666666664"/>
+                                                <rect key="frame" x="171.66666666666666" y="0.0" width="54.333333333333343" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="f8V-N9-8tl" secondAttribute="height" multiplier="1:1" id="xhA-Rg-BKx"/>
                                                 </constraints>
                                             </view>
                                             <view tag="39" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOj-dP-2Q9" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="212.33333333333334" y="0.0" width="49.666666666666657" height="49.666666666666664"/>
+                                                <rect key="frame" x="228.99999999999997" y="0.0" width="54.666666666666657" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FOj-dP-2Q9" secondAttribute="height" multiplier="1:1" id="z92-AS-b77"/>
@@ -355,38 +355,38 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="SDM-nB-Uqv">
-                                        <rect key="frame" x="0.0" y="421.66666666666669" width="262" height="49.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="456" width="283.66666666666669" height="54"/>
                                         <subviews>
                                             <view tag="40" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIe-8m-UO3" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="49.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="54.666666666666664" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="fIe-8m-UO3" secondAttribute="height" multiplier="1:1" id="EAA-dC-lfG"/>
                                                 </constraints>
                                             </view>
                                             <view tag="41" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhW-Nh-K5h" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="50.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="58" y="0.0" width="54.333333333333343" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="rhW-Nh-K5h" secondAttribute="height" multiplier="1:1" id="qh9-Ih-kzY"/>
                                                 </constraints>
                                             </view>
                                             <view tag="42" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzW-qo-HPR" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="106.33333333333334" y="0.0" width="50" height="49.666666666666664"/>
+                                                <rect key="frame" x="115.33333333333334" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="uzW-qo-HPR" secondAttribute="height" multiplier="1:1" id="myO-fh-vsO"/>
                                                 </constraints>
                                             </view>
                                             <view tag="43" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGg-ry-HVQ" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="159.33333333333334" y="0.0" width="50" height="49.666666666666664"/>
+                                                <rect key="frame" x="172.66666666666666" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="GGg-ry-HVQ" secondAttribute="height" multiplier="1:1" id="OS0-rO-Bg8"/>
                                                 </constraints>
                                             </view>
                                             <view tag="44" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJf-Gh-XSY" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="212.33333333333334" y="0.0" width="49.666666666666657" height="49.666666666666664"/>
+                                                <rect key="frame" x="229.66666666666669" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="gJf-Gh-XSY" secondAttribute="height" multiplier="1:1" id="kKe-Rh-YT6"/>
@@ -395,38 +395,38 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="U6u-Vs-Y1M">
-                                        <rect key="frame" x="0.0" y="474.33333333333337" width="262" height="49.666666666666629"/>
+                                        <rect key="frame" x="0.0" y="513" width="283.66666666666669" height="54"/>
                                         <subviews>
                                             <view tag="45" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMM-bL-6df" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="49.333333333333336" height="49.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="53.666666666666664" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ZMM-bL-6df" secondAttribute="height" multiplier="1:1" id="te1-sy-FqF"/>
                                                 </constraints>
                                             </view>
                                             <view tag="46" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9m-Fc-JTc" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="49.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="57.333333333333329" y="0.0" width="53.666666666666671" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="X9m-Fc-JTc" secondAttribute="height" multiplier="1:1" id="uxL-mM-4dJ"/>
                                                 </constraints>
                                             </view>
                                             <view tag="47" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tqq-8G-4Kc" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="106.00000000000001" y="0.0" width="49.666666666666671" height="49.666666666666664"/>
+                                                <rect key="frame" x="114.33333333333334" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Tqq-8G-4Kc" secondAttribute="height" multiplier="1:1" id="MHz-Uk-Y91"/>
                                                 </constraints>
                                             </view>
                                             <view tag="48" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iCS-Z2-W84" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="159.33333333333334" y="0.0" width="49.666666666666657" height="49.666666666666664"/>
+                                                <rect key="frame" x="172" y="0.0" width="54" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="iCS-Z2-W84" secondAttribute="height" multiplier="1:1" id="rR3-Xu-ftZ"/>
                                                 </constraints>
                                             </view>
                                             <view tag="49" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exP-2d-q6a" customClass="CellView" customModule="BoardGame" customModuleProvider="target">
-                                                <rect key="frame" x="212.66666666666666" y="0.0" width="49.333333333333343" height="49.666666666666664"/>
+                                                <rect key="frame" x="229.33333333333334" y="0.0" width="54.333333333333343" height="54"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="exP-2d-q6a" secondAttribute="height" multiplier="1:1" id="3Jy-4R-dWt"/>
@@ -436,16 +436,79 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ee8-rk-cxW">
+                                <rect key="frame" x="50" y="670" width="275" height="108"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oj3-wf-aIm">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="85"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3V-HP-OvD" customClass="ProductView" customModule="BoardGame" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="c3V-HP-OvD" secondAttribute="height" multiplier="1:1" id="O8g-8D-gfq"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYZ-nS-jTU" customClass="ProductView" customModule="BoardGame" customModuleProvider="target">
+                                                <rect key="frame" x="95" y="0.0" width="85" height="85"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="MYZ-nS-jTU" secondAttribute="height" multiplier="1:1" id="Fjc-YK-EzP"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8O-hl-hOf" customClass="ProductView" customModule="BoardGame" customModuleProvider="target">
+                                                <rect key="frame" x="190" y="0.0" width="85" height="85"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="S8O-hl-hOf" secondAttribute="height" multiplier="1:1" id="EQ9-Bd-nZI"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fie-gs-t3w">
+                                        <rect key="frame" x="0.0" y="95" width="275" height="13"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="407-qq-oDR">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7i-yc-Npd">
+                                                <rect key="frame" x="95" y="0.0" width="85" height="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nl-1n-oS2">
+                                                <rect key="frame" x="190" y="0.0" width="85" height="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fie-gs-t3w" firstAttribute="leading" secondItem="ee8-rk-cxW" secondAttribute="leading" id="9HX-tf-61W"/>
+                                    <constraint firstAttribute="trailing" secondItem="oj3-wf-aIm" secondAttribute="trailing" id="eac-7h-2rs"/>
+                                    <constraint firstAttribute="trailing" secondItem="fie-gs-t3w" secondAttribute="trailing" id="mDj-tc-HA4"/>
+                                    <constraint firstItem="oj3-wf-aIm" firstAttribute="leading" secondItem="ee8-rk-cxW" secondAttribute="leading" id="uKA-3W-Ndx"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="xCP-Bq-gIP" firstAttribute="top" secondItem="6Lc-DK-CEh" secondAttribute="bottom" constant="30" id="G3P-pv-9eA"/>
+                            <constraint firstItem="xCP-Bq-gIP" firstAttribute="top" secondItem="6Lc-DK-CEh" secondAttribute="bottom" constant="15" id="G3P-pv-9eA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ee8-rk-cxW" secondAttribute="bottom" id="K3f-P2-A39"/>
                             <constraint firstItem="6Lc-DK-CEh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Sto-HM-hX3"/>
                             <constraint firstItem="xCP-Bq-gIP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YOA-6y-IYr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Lc-DK-CEh" secondAttribute="trailing" constant="10" id="bJM-0I-L7T"/>
                             <constraint firstItem="pro-qo-7QO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="cjO-41-kdE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xCP-Bq-gIP" secondAttribute="bottom" constant="170" id="dav-UV-qSI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ee8-rk-cxW" secondAttribute="trailing" constant="50" id="dNe-yi-fMp"/>
                             <constraint firstItem="pro-qo-7QO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ktJ-dK-IAn"/>
+                            <constraint firstItem="ee8-rk-cxW" firstAttribute="top" secondItem="xCP-Bq-gIP" secondAttribute="bottom" constant="10" id="m0t-XM-xke"/>
+                            <constraint firstItem="ee8-rk-cxW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="wtd-iu-uTt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -500,6 +563,12 @@
                         <outletCollection property="cells" destination="Tqq-8G-4Kc" collectionClass="NSMutableArray" id="VOH-pG-4Z6"/>
                         <outletCollection property="cells" destination="iCS-Z2-W84" collectionClass="NSMutableArray" id="Mg8-F5-oOg"/>
                         <outletCollection property="cells" destination="exP-2d-q6a" collectionClass="NSMutableArray" id="85o-dA-10N"/>
+                        <outletCollection property="products" destination="c3V-HP-OvD" collectionClass="NSMutableArray" id="fBd-wx-MRt"/>
+                        <outletCollection property="products" destination="MYZ-nS-jTU" collectionClass="NSMutableArray" id="7w6-Mr-yVe"/>
+                        <outletCollection property="products" destination="S8O-hl-hOf" collectionClass="NSMutableArray" id="TMr-DW-BDU"/>
+                        <outletCollection property="prices" destination="407-qq-oDR" collectionClass="NSMutableArray" id="URW-lm-XZ9"/>
+                        <outletCollection property="prices" destination="I7i-yc-Npd" collectionClass="NSMutableArray" id="ZRY-pK-x6m"/>
+                        <outletCollection property="prices" destination="6nl-1n-oS2" collectionClass="NSMutableArray" id="sFK-lW-NnB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
