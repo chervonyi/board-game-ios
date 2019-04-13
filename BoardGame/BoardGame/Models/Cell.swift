@@ -10,7 +10,7 @@ import Foundation
 
 class Cell {
     
-    private var id: Int
+    let id: Int
     
     var isHighlighted: Bool
     

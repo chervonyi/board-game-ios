@@ -14,25 +14,29 @@ class Game {
         case ENEMY, ALLIANCE
     }
     
-    
-    // CONSTANTS
+    // CONSTANTS:
     static let COLUMNS = 5
     static let ROWS = 10
     static let CELLS = Game.COLUMNS * Game.ROWS
     static let BASE_SIZE = 3
     
-    // VARS
+    // VARS:
     private(set) var board = [Cell]()
+    private var _selectedCell = -1
+    private var turn = PlayerState.ALLIANCE
+    private var bot = Bot()
+    weak var delegate: GameDelegate?
+    
     
     var bases = [PlayerState.ALLIANCE : Base(owner: PlayerState.ALLIANCE, sizeOfBase: Game.BASE_SIZE),
                  PlayerState.ENEMY : Base(owner: PlayerState.ENEMY, sizeOfBase: Game.BASE_SIZE)]
     
-    private var _selectedCell = -1
     
+    // PROPERTIES:
     var selectedCell: Int {
         set {
-            // Check if newValue is in 0..49 range
-            guard Cell.isExist(newValue) else { return }
+            // Check if newValue is in 0..49 range and it's player's turn
+            guard Cell.isExist(newValue) && turn == PlayerState.ALLIANCE else { return }
             
             let cell = board[newValue]
             
@@ -76,6 +80,7 @@ class Game {
         
         cellTo.set(cellFrom)
         cellFrom.reset()
+        endTurn()
     }
     
     private func removeAnySelection() {
@@ -88,13 +93,29 @@ class Game {
     
     // CONSTRUCTOR
     init() {
-    
         // Fill up board with instances of Cell
         for i in 0..<Game.CELLS {
             board.append(Cell(id: i))
         }
         
         locateStartPieces()
+    }
+    
+    private func makeBotMove() {
+        let botMove = bot.getMove(board: board)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+            self.move(from: botMove.from, to: botMove.to)
+        })
+    }
+    
+    private func endTurn() {
+        if turn == PlayerState.ALLIANCE {
+            turn = .ENEMY
+            makeBotMove()
+        } else {
+            delegate?.updateBoard()
+            turn = .ALLIANCE
+        }
     }
     
     private func locateStartPieces() {

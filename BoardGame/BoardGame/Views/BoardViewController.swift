@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+protocol GameDelegate: class {
+    func updateBoard()
+}
+
 class BoardViewController: UIViewController {
 
     @IBOutlet var cells: [CellView]!
@@ -23,6 +28,8 @@ class BoardViewController: UIViewController {
         cells = cells.sorted(by: {$0.tag < $1.tag})
        
         updateBoardView()
+        
+        game.delegate = self
     }
 
     func updateBoardView() {
@@ -70,7 +77,12 @@ class BoardViewController: UIViewController {
         game.selectedCell = tag!
         
         updateBoardView()
-        
     }
 }
 
+
+extension BoardViewController: GameDelegate {
+    func updateBoard() {
+        updateBoardView()
+    }
+}

@@ -23,6 +23,8 @@
 		DA756CF922612AF70025D3CF /* Stone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CF822612AF70025D3CF /* Stone.swift */; };
 		DA756CFB22612B1A0025D3CF /* Master.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CFA22612B1A0025D3CF /* Master.swift */; };
 		DA756CFD22612B460025D3CF /* Predator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CFC22612B460025D3CF /* Predator.swift */; };
+		DA756CFF22617E760025D3CF /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CFE22617E760025D3CF /* Bot.swift */; };
+		DA756D012261802D0025D3CF /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756D002261802D0025D3CF /* Move.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		DA756CF822612AF70025D3CF /* Stone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stone.swift; sourceTree = "<group>"; };
 		DA756CFA22612B1A0025D3CF /* Master.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Master.swift; sourceTree = "<group>"; };
 		DA756CFC22612B460025D3CF /* Predator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predator.swift; sourceTree = "<group>"; };
+		DA756CFE22617E760025D3CF /* Bot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
+		DA756D002261802D0025D3CF /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 				DA756CEA2260F4610025D3CF /* Game.swift */,
 				DA756CEC2260F4C10025D3CF /* Cell.swift */,
 				DA756CF4226124EB0025D3CF /* Base.swift */,
+				DA756CFE22617E760025D3CF /* Bot.swift */,
+				DA756D002261802D0025D3CF /* Move.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -261,8 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA756D012261802D0025D3CF /* Move.swift in Sources */,
 				DA756CF5226124EB0025D3CF /* Base.swift in Sources */,
 				DA756CF32260FCB10025D3CF /* Soldier.swift in Sources */,
+				DA756CFF22617E760025D3CF /* Bot.swift in Sources */,
 				DA0A05DF225FAE0B00FAA30D /* BoardViewController.swift in Sources */,
 				DA756CFB22612B1A0025D3CF /* Master.swift in Sources */,
 				DA0A05DD225FAE0B00FAA30D /* AppDelegate.swift in Sources */,
