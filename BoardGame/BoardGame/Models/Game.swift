@@ -31,11 +31,20 @@ class Game {
     
     var selectedCell: Int {
         set {
+            // Check if newValue is in 0..49 range
+            guard Cell.isExist(newValue) else { return }
+            
             let cell = board[newValue]
             
+            if _selectedCell != -1 && cell.isHighlighted {
+                if cell.isEmpty || (cell.owner == PlayerState.ENEMY && cell.occupation!.ableToFight) {
+                    move(from: _selectedCell, to: newValue)
+                    removeAnySelection()
+                    return
+                }
+            }
+            
             removeAnySelection()
-            
-            
             
             if !cell.isEmpty && cell.occupation!.ableToMove && cell.owner == PlayerState.ALLIANCE {
                 _selectedCell = newValue
@@ -43,13 +52,30 @@ class Game {
                 for cellId in cell.availabelCellsToMove {
                     board[cellId].isHighlighted = true
                 }
-                
             }
         }
         
         get {
             return _selectedCell
         }
+    }
+    
+    private func move(from: Int, to: Int) {
+        guard Cell.isExist(from) && Cell.isExist(to) else { return }
+        
+        let cellFrom = board[from]
+        let cellTo = board[to]
+        
+        if !cellTo.isEmpty || cellFrom.owner != cellTo.owner {
+            if cellTo.isEndingFigure {
+                // TODO - end of game
+            } else {
+                // TODO - get reward for a destroy
+            }
+        }
+        
+        cellTo.set(cellFrom)
+        cellFrom.reset()
     }
     
     private func removeAnySelection() {

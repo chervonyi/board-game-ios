@@ -26,6 +26,10 @@ class Cell {
         return occupation!.getAvailableCellsToMove(from: id)
     }
     
+    var isEndingFigure: Bool {
+        return occupation is Source
+    }
+    
     // CONSTRUCTOR
     init(id : Int) {
         self.id = id
@@ -35,6 +39,11 @@ class Cell {
     func set(figure: Figure, owner: Game.PlayerState) {
         self.occupation = figure
         self.owner = owner
+    }
+    
+    func set(_ cell: Cell) {
+        self.occupation = cell.occupation
+        self.owner = cell.owner
     }
     
     func reset() {
@@ -65,6 +74,8 @@ class Cell {
         
         return position
     }
+    
+    
     
     
 }
