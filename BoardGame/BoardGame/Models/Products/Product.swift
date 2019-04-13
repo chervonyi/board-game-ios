@@ -19,4 +19,7 @@ class Product {
     
     var shopView: String! = nil
     
+    var isFigure: Bool {
+        return self is Figure
+    }
 }

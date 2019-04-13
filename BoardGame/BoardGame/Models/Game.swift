@@ -43,7 +43,20 @@ class Game {
             
             let cell = board[newValue]
             
-            if _selectedCell != -1 && cell.isHighlighted {
+            if _selectedCell == -1 && _selectedProduct != -1 && cell.isHighlighted {
+                // Buy figure and replace it on the board
+                
+                let piece = shop.buy(product: _selectedProduct) as! Figure
+                // TODO - change amount
+                cell.set(figure: piece, owner: PlayerState.ALLIANCE)
+                
+                endTurn()
+                
+                removeAnySelection()
+                return
+                
+            } else if _selectedCell != -1 && cell.isHighlighted {
+                // Move figure
                 if cell.isEmpty || (cell.owner == PlayerState.ENEMY && cell.occupation!.ableToFight) {
                     move(from: _selectedCell, to: newValue)
                     removeAnySelection()
@@ -54,6 +67,7 @@ class Game {
             removeAnySelection()
             
             if !cell.isEmpty && cell.occupation!.ableToMove && cell.owner == PlayerState.ALLIANCE {
+                
                 _selectedCell = newValue
                 
                 for cellId in cell.availabelCellsToMove {
@@ -72,10 +86,25 @@ class Game {
             guard 0...shop.PRODUCT_COUNT ~= newValue && turn == PlayerState.ALLIANCE else { return }
             
             removeAnySelection()
-            _selectedProduct = newValue
             
-            // if shop.cart[newValue] isFigure
-            //     then add selection of free cells of alliance's base
+            // TODO - replace '100' with real user's amount of money
+            if shop.canBuy(product: newValue, with: 100) {
+                // User has enough money to buy selected product
+                
+                // Find out if selected product is a piece or a card
+                if shop.cart[newValue].isFigure {
+                    _selectedProduct = newValue
+                    
+                    for cellId in (bases[PlayerState.ALLIANCE]?.getFreeCells(board: board))! {
+                        board[cellId].isHighlighted = true
+                    }
+                } else {
+                    // TODO - Buy selected card
+                }
+            }
+            
+            
+        
         }
         get {
             return _selectedProduct
