@@ -102,9 +102,6 @@ class Game {
                     // TODO - Buy selected card
                 }
             }
-            
-            
-        
         }
         get {
             return _selectedProduct

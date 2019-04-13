@@ -17,6 +17,13 @@
 		DA2D1E17226240C4000558C4 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E16226240C4000558C4 /* ProductView.swift */; };
 		DA2D1E192262559B000558C4 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E182262559B000558C4 /* Shop.swift */; };
 		DA2D1E1B226255BE000558C4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E1A226255BE000558C4 /* Product.swift */; };
+		DA2D1E1E22629D61000558C4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E1D22629D61000558C4 /* Card.swift */; };
+		DA2D1E2022629E13000558C4 /* Advertisement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E1F22629E13000558C4 /* Advertisement.swift */; };
+		DA2D1E222262A2FF000558C4 /* Businessman.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E212262A2FF000558C4 /* Businessman.swift */; };
+		DA2D1E242262A8D2000558C4 /* ControlRandomEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E232262A8D2000558C4 /* ControlRandomEnemy.swift */; };
+		DA2D1E262262A92F000558C4 /* CreateRandomFigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E252262A92F000558C4 /* CreateRandomFigure.swift */; };
+		DA2D1E282262A98E000558C4 /* KillRandomEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E272262A98E000558C4 /* KillRandomEnemy.swift */; };
+		DA2D1E2A2262A9D3000558C4 /* NewShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E292262A9D3000558C4 /* NewShop.swift */; };
 		DA756CEB2260F4610025D3CF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CEA2260F4610025D3CF /* Game.swift */; };
 		DA756CED2260F4C10025D3CF /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CEC2260F4C10025D3CF /* Cell.swift */; };
 		DA756CF12260FB730025D3CF /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CF02260FB730025D3CF /* Figure.swift */; };
@@ -55,6 +62,13 @@
 		DA2D1E16226240C4000558C4 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		DA2D1E182262559B000558C4 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		DA2D1E1A226255BE000558C4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		DA2D1E1D22629D61000558C4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DA2D1E1F22629E13000558C4 /* Advertisement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertisement.swift; sourceTree = "<group>"; };
+		DA2D1E212262A2FF000558C4 /* Businessman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Businessman.swift; sourceTree = "<group>"; };
+		DA2D1E232262A8D2000558C4 /* ControlRandomEnemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlRandomEnemy.swift; sourceTree = "<group>"; };
+		DA2D1E252262A92F000558C4 /* CreateRandomFigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRandomFigure.swift; sourceTree = "<group>"; };
+		DA2D1E272262A98E000558C4 /* KillRandomEnemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KillRandomEnemy.swift; sourceTree = "<group>"; };
+		DA2D1E292262A9D3000558C4 /* NewShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShop.swift; sourceTree = "<group>"; };
 		DA756CEA2260F4610025D3CF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		DA756CEC2260F4C10025D3CF /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		DA756CF02260FB730025D3CF /* Figure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
@@ -145,6 +159,31 @@
 			path = "Supporting files";
 			sourceTree = "<group>";
 		};
+		DA2D1E1C22629D40000558C4 /* Figures */ = {
+			isa = PBXGroup;
+			children = (
+				DA756CF22260FCB10025D3CF /* Soldier.swift */,
+				DA756CF622612ABA0025D3CF /* Source.swift */,
+				DA756CF822612AF70025D3CF /* Stone.swift */,
+				DA756CFA22612B1A0025D3CF /* Master.swift */,
+				DA756CFC22612B460025D3CF /* Predator.swift */,
+			);
+			path = Figures;
+			sourceTree = "<group>";
+		};
+		DA2D1E2B2262AD4F000558C4 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				DA2D1E1F22629E13000558C4 /* Advertisement.swift */,
+				DA2D1E212262A2FF000558C4 /* Businessman.swift */,
+				DA2D1E232262A8D2000558C4 /* ControlRandomEnemy.swift */,
+				DA2D1E252262A92F000558C4 /* CreateRandomFigure.swift */,
+				DA2D1E272262A98E000558C4 /* KillRandomEnemy.swift */,
+				DA2D1E292262A9D3000558C4 /* NewShop.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
 		DA756CE92260F44C0025D3CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,12 +202,10 @@
 			isa = PBXGroup;
 			children = (
 				DA756CF02260FB730025D3CF /* Figure.swift */,
-				DA756CF22260FCB10025D3CF /* Soldier.swift */,
-				DA756CF622612ABA0025D3CF /* Source.swift */,
-				DA756CF822612AF70025D3CF /* Stone.swift */,
-				DA756CFA22612B1A0025D3CF /* Master.swift */,
-				DA756CFC22612B460025D3CF /* Predator.swift */,
+				DA2D1E1C22629D40000558C4 /* Figures */,
 				DA2D1E1A226255BE000558C4 /* Product.swift */,
+				DA2D1E1D22629D61000558C4 /* Card.swift */,
+				DA2D1E2B2262AD4F000558C4 /* Cards */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -276,13 +313,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2D1E222262A2FF000558C4 /* Businessman.swift in Sources */,
 				DA756D012261802D0025D3CF /* Move.swift in Sources */,
+				DA2D1E1E22629D61000558C4 /* Card.swift in Sources */,
 				DA756CF5226124EB0025D3CF /* Base.swift in Sources */,
+				DA2D1E262262A92F000558C4 /* CreateRandomFigure.swift in Sources */,
 				DA756CF32260FCB10025D3CF /* Soldier.swift in Sources */,
 				DA756CFF22617E760025D3CF /* Bot.swift in Sources */,
 				DA0A05DF225FAE0B00FAA30D /* BoardViewController.swift in Sources */,
 				DA2D1E1B226255BE000558C4 /* Product.swift in Sources */,
 				DA756CFB22612B1A0025D3CF /* Master.swift in Sources */,
+				DA2D1E242262A8D2000558C4 /* ControlRandomEnemy.swift in Sources */,
+				DA2D1E2022629E13000558C4 /* Advertisement.swift in Sources */,
+				DA2D1E2A2262A9D3000558C4 /* NewShop.swift in Sources */,
 				DA0A05DD225FAE0B00FAA30D /* AppDelegate.swift in Sources */,
 				DA756CED2260F4C10025D3CF /* Cell.swift in Sources */,
 				DA756CFD22612B460025D3CF /* Predator.swift in Sources */,
@@ -293,6 +336,7 @@
 				DA756CEB2260F4610025D3CF /* Game.swift in Sources */,
 				DA756CF12260FB730025D3CF /* Figure.swift in Sources */,
 				DA2D1E192262559B000558C4 /* Shop.swift in Sources */,
+				DA2D1E282262A98E000558C4 /* KillRandomEnemy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
