@@ -22,10 +22,12 @@ class Game {
     
     // VARS:
     private(set) var board = [Cell]()
+    private(set) var shop = Shop()
     private var _selectedCell = -1
     private var _selectedProduct = -1
     private var turn = PlayerState.ALLIANCE
     private var bot = Bot()
+    
     weak var delegate: GameDelegate?
     
     
@@ -67,7 +69,13 @@ class Game {
     
     var selectedProduct: Int {
         set {
+            guard 0...shop.PRODUCT_COUNT ~= newValue && turn == PlayerState.ALLIANCE else { return }
             
+            removeAnySelection()
+            _selectedProduct = newValue
+            
+            // if shop.cart[newValue] isFigure
+            //     then add selection of free cells of alliance's base
         }
         get {
             return _selectedProduct
@@ -127,7 +135,7 @@ class Game {
             cell.isHighlighted = false
         }
         
-        
+        _selectedProduct = -1
         _selectedCell = -1
     }
     

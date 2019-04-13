@@ -34,25 +34,24 @@ class BoardViewController: UIViewController {
         prices = prices.sorted(by: {$0.tag < $1.tag})
         
         updateBoardView()
+        updateShopView()
         
         game.delegate = self
     }
 
-    
     @objc func selectCell(sender: UITapGestureRecognizer) {
         let tag = sender.view?.tag
         game.selectedCell = tag!
         updateBoardView()
+        updateShopView()
     }
     
     @objc func selectProduct(sender: UITapGestureRecognizer) {
         let tag = sender.view?.tag
-        print(tag!)
-        // TODO - game.selectedProduct = tag!
-        // updateBoardView()
-        // updateShopView()
+        game.selectedProduct = tag!
+        updateBoardView()
+        updateShopView()
     }
-    
     
     func updateBoardView() {
         for cellView in cells {
@@ -82,6 +81,25 @@ class BoardViewController: UIViewController {
                     cellView.image = UIImage(named: (cell.occupation?.redFigureIcon)!)
                 }
             }
+        }
+    }
+    
+    func updateShopView() {
+        for productView in products {
+            
+            let id = productView.tag
+            
+            let product = game.shop.cart[id]
+            
+            if game.selectedProduct == id {
+                productView.isHighlighted = true
+            } else {
+                productView.isHighlighted = false
+            }
+            
+            productView.image = UIImage(named: product.shopView!)
+            
+            prices[id].text = "$" + String(product.cost)
         }
     }
     

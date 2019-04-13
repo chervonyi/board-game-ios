@@ -10,7 +10,7 @@ import Foundation
 
 class Shop {
     
-    var cart = [Product]()
+    private(set) var cart = [Product]()
     
     private var availabelProducts: [Product.Kind] = [
         .Master,
