@@ -35,6 +35,7 @@
 		DA756CFD22612B460025D3CF /* Predator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CFC22612B460025D3CF /* Predator.swift */; };
 		DA756CFF22617E760025D3CF /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CFE22617E760025D3CF /* Bot.swift */; };
 		DA756D012261802D0025D3CF /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756D002261802D0025D3CF /* Move.swift */; };
+		DACCA98A2263DD3600AE634F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCA9892263DD3600AE634F /* Account.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		DA756CFC22612B460025D3CF /* Predator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predator.swift; sourceTree = "<group>"; };
 		DA756CFE22617E760025D3CF /* Bot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
 		DA756D002261802D0025D3CF /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		DACCA9892263DD3600AE634F /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 				DA756CFE22617E760025D3CF /* Bot.swift */,
 				DA756D002261802D0025D3CF /* Move.swift */,
 				DA2D1E182262559B000558C4 /* Shop.swift */,
+				DACCA9892263DD3600AE634F /* Account.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				DA2D1E17226240C4000558C4 /* ProductView.swift in Sources */,
 				DA756CF722612ABA0025D3CF /* Source.swift in Sources */,
 				DA0A0601225FC04300FAA30D /* CellView.swift in Sources */,
+				DACCA98A2263DD3600AE634F /* Account.swift in Sources */,
 				DA756CEB2260F4610025D3CF /* Game.swift in Sources */,
 				DA756CF12260FB730025D3CF /* Figure.swift in Sources */,
 				DA2D1E192262559B000558C4 /* Shop.swift in Sources */,

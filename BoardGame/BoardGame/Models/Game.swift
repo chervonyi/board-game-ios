@@ -34,10 +34,11 @@ class Game {
     
     weak var delegate: GameDelegate?
     
+    var accounts = [PlayerState.ALLIANCE : Account(amount: 100, income: 10),
+                    PlayerState.ENEMY : Account(amount: 100, income: 10)]
     
     var bases = [PlayerState.ALLIANCE : Base(owner: PlayerState.ALLIANCE, sizeOfBase: Game.BASE_SIZE),
                  PlayerState.ENEMY : Base(owner: PlayerState.ENEMY, sizeOfBase: Game.BASE_SIZE)]
-    
     
     // PROPERTIES:
     var selectedCell: Int {
@@ -106,9 +107,9 @@ class Game {
                     
                     let card = shop.buy(product: newValue) as! Card
                     // TODO - Change amount
-                    card.use(user: Game.PlayerState.ALLIANCE, game: self)
-                    // TODO - Show DialogMessage to submit using of bought card
-                    endTurn()
+                    if card.use(user: Game.PlayerState.ALLIANCE, game: self) {
+                        endTurn()
+                    }
                 }
             }
         }
