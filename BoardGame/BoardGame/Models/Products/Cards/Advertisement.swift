@@ -29,10 +29,10 @@ class Advertisement : Card {
     override init() {
         super.init()
         cost = 0
-        shopView = "advertisment"
+        shopView = "advertisement"
     }
     
-    override func use(user: Game.PlayerState) -> Bool {
+    override func use(user: Game.PlayerState, game: Game) -> Bool {
         return false
     }
 }

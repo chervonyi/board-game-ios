@@ -11,8 +11,24 @@ import Foundation
 class Product {
     
     enum Kind {
-        case Source, Soldier, Master, Stone, Predator
-        //case Adverisement, KillRandomFigure, CreateRandomFigure // TODO - finish this list
+        case SOURCE, SOLDIER, MASTER, STONE, PREDATOR
+        case ADVERTISEMENT, BUSINESSMAN, CONTROLL_RANDOM_ENEMY, CREATE_RANDOM_FIGURE, KILL_RANDOM_ENEMY, NEW_SHOP
+        
+        var product: Product {
+            switch self {
+            case Kind.MASTER:                   return Master()
+            case Kind.SOURCE:                   return Source()
+            case Kind.SOLDIER:                  return Soldier()
+            case Kind.STONE:                    return Stone()
+            case Kind.PREDATOR:                 return Predator()
+            case Kind.ADVERTISEMENT:            return Advertisement()
+            case Kind.BUSINESSMAN:              return Businessman()
+            case Kind.CONTROLL_RANDOM_ENEMY:    return ControlRandomEnemy()
+            case Kind.CREATE_RANDOM_FIGURE:     return CreateRandomFigure()
+            case Kind.KILL_RANDOM_ENEMY:        return KillRandomEnemy()
+            case Kind.NEW_SHOP:                 return NewShop()
+            }
+        }
     }
     
     var cost: Int! = nil

@@ -30,7 +30,10 @@ class KillRandomEnemy : Card {
         shopView = "random_kill"
     }
     
-    override func use(user: Game.PlayerState) -> Bool {
-        return false
+    override func use(user: Game.PlayerState, game: Game) -> Bool {
+        
+        // Get random figure of 'user' enemy and destroy (reset) it
+        game.board.getFigures(of: user.reverse).random.reset()
+        return true
     }
 }

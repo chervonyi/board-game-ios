@@ -14,7 +14,7 @@ class Card : Product {
     
     var submitQuestion: String!
     
-    func use(user: Game.PlayerState) -> Bool {
+    func use(user: Game.PlayerState, game: Game) -> Bool {
         return false
     }
 }

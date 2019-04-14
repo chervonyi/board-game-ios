@@ -30,7 +30,9 @@ class Businessman : Card {
         shopView = "business"
     }
     
-    override func use(user: Game.PlayerState) -> Bool {
-        return false
+    override func use(user: Game.PlayerState, game: Game) -> Bool {
+        
+        // TODO - Realize this method
+        return true
     }
 }

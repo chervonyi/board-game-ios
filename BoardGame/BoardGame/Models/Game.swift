@@ -12,6 +12,10 @@ class Game {
     
     enum PlayerState {
         case ENEMY, ALLIANCE
+        
+        var reverse: PlayerState {
+            return self == .ALLIANCE ? .ENEMY : .ALLIANCE
+        }
     }
     
     // CONSTANTS:
@@ -22,11 +26,11 @@ class Game {
     
     // VARS:
     private(set) var board = [Cell]()
-    private(set) var shop = Shop()
     private var _selectedCell = -1
     private var _selectedProduct = -1
     private var turn = PlayerState.ALLIANCE
     private var bot = Bot()
+    var shop = Shop()
     
     weak var delegate: GameDelegate?
     
@@ -99,7 +103,12 @@ class Game {
                         board[cellId].isHighlighted = true
                     }
                 } else {
-                    // TODO - Buy selected card
+                    
+                    let card = shop.buy(product: newValue) as! Card
+                    // TODO - Change amount
+                    card.use(user: Game.PlayerState.ALLIANCE, game: self)
+                    // TODO - Show DialogMessage to submit using of bought card
+                    endTurn()
                 }
             }
         }
@@ -107,8 +116,6 @@ class Game {
             return _selectedProduct
         }
     }
-    
-    
     
     // CONSTRUCTOR
     init() {
@@ -141,6 +148,12 @@ class Game {
     
     private func makeBotMove() {
         let botMove = bot.getMove(board: board)
+        
+        if botMove.from == -1 {
+            endTurn()
+            return
+        }
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
             self.move(from: botMove.from, to: botMove.to)
         })
@@ -183,23 +196,34 @@ class Game {
             var figure: Figure
             
             switch kind {
-            case Figure.Figures.Source:
-                figure = Source()
-                
-            case .Soldier:
-                figure = Soldier()
-                
-            case .Master:
-                figure = Master()
-                
-            case .Stone:
-                figure = Stone()
-                
-            case .Predator:
-                figure = Predator()
+            case Figure.Figures.Source: figure = Source()
+            case .Soldier:              figure = Soldier()
+            case .Master:               figure = Master()
+            case .Stone:                figure = Stone()
+            case .Predator:             figure = Predator()
             }
             
             board[freePosition].set(figure: figure, owner: owner)
         }
     }
 }
+
+extension Array where Element == Cell {
+    
+    func getFigures(of owner: Game.PlayerState) -> [Cell] {
+        return self.filter {$0.owner == owner && !$0.isEndingFigure }
+    }
+    
+    var random: Cell {
+        return self[self.count.random]
+    }
+}
+
+extension Array where Element == Int {
+    var random: Int {
+        return self[self.count.random]
+    }
+}
+
+
+

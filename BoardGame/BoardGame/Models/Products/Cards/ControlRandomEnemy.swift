@@ -30,7 +30,9 @@ class ControlRandomEnemy : Card {
         shopView = "control"
     }
     
-    override func use(user: Game.PlayerState) -> Bool {
-        return false
+    override func use(user: Game.PlayerState, game: Game) -> Bool {
+        // Get random figure of 'user' enemy
+        game.board.getFigures(of: user.reverse).random.owner = user
+        return true
     }
 }

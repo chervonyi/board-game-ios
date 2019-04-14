@@ -30,7 +30,8 @@ class NewShop : Card {
         shopView = "new_shop"
     }
     
-    override func use(user: Game.PlayerState) -> Bool {
-        return false
+    override func use(user: Game.PlayerState, game: Game) -> Bool {
+        game.shop = Shop()
+        return true
     }
 }

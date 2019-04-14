@@ -24,6 +24,6 @@ class Bot {
             }
         }
         
-        return cellsToMove[cellsToMove.count.random]
+        return cellsToMove.count > 0 ? cellsToMove[cellsToMove.count.random] : Move(from: -1, to: -1)
     }
 }

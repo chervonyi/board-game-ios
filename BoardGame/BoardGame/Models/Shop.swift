@@ -13,12 +13,20 @@ class Shop {
     private(set) var cart = [Product]()
     
     private var availabelProducts: [Product.Kind] = [
-        .Master,
-        .Source,
-        .Stone,
-        .Soldier,
-        .Predator
-        // + Cards
+        // Figures:
+        .SOURCE,
+        .SOLDIER,
+        .MASTER,
+        .STONE,
+        .PREDATOR,
+    
+    // Cards:
+        .ADVERTISEMENT,
+        .BUSINESSMAN,
+        .CONTROLL_RANDOM_ENEMY,
+        .CREATE_RANDOM_FIGURE,
+        .KILL_RANDOM_ENEMY,
+        .NEW_SHOP
     ]
     
     let PRODUCT_COUNT = 3
@@ -42,18 +50,7 @@ class Shop {
     }
     
     private func nextProduct() -> Product {
-        switch availabelProducts[availabelProducts.count.random] {
-        case Product.Kind.Master:
-            return Master()
-        case .Source:
-            return Source()
-        case .Soldier:
-            return Soldier()
-        case .Stone:
-            return Stone()
-        case .Predator:
-            return Predator()
-        }
+        return availabelProducts[availabelProducts.count.random].product
     }
     
 }

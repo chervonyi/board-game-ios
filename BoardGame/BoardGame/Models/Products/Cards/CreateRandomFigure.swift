@@ -30,7 +30,15 @@ class CreateRandomFigure : Card {
         shopView = "new_figure"
     }
     
-    override func use(user: Game.PlayerState) -> Bool {
-        return false
+    override func use(user: Game.PlayerState, game: Game) -> Bool {
+        
+        guard let randPos = game.bases[user]?.getRandomFreeCell(board: game.board) else { return false }
+        
+        let allKinds = [Product.Kind.SOURCE, .SOLDIER, .MASTER, .STONE, .PREDATOR]
+        let randFigure = allKinds[allKinds.count.random].product as! Figure
+        
+        game.board[randPos].set(figure: randFigure, owner: user)
+        
+        return true
     }
 }
