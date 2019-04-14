@@ -15,6 +15,10 @@ protocol GameDelegate: class {
 
 class BoardViewController: UIViewController {
 
+    @IBOutlet weak var incomeLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+    
+    
     @IBOutlet var cells: [CellView]!
     
     @IBOutlet var products: [ProductView]!
@@ -33,8 +37,7 @@ class BoardViewController: UIViewController {
         products = products.sorted(by: {$0.tag < $1.tag})
         prices = prices.sorted(by: {$0.tag < $1.tag})
         
-        updateBoardView()
-        updateShopView()
+        updateAll()
         
         game.delegate = self
     }
@@ -42,15 +45,19 @@ class BoardViewController: UIViewController {
     @objc func selectCell(sender: UITapGestureRecognizer) {
         let tag = sender.view?.tag
         game.selectedCell = tag!
-        updateBoardView()
-        updateShopView()
+        updateAll()
     }
     
     @objc func selectProduct(sender: UITapGestureRecognizer) {
         let tag = sender.view?.tag
         game.selectedProduct = tag!
+        updateAll()
+    }
+    
+    func updateAll() {
         updateBoardView()
         updateShopView()
+        updateLabels()
     }
     
     func updateBoardView() {
@@ -103,6 +110,11 @@ class BoardViewController: UIViewController {
         }
     }
     
+    func updateLabels() {
+        incomeLabel.text = "+" + String(game.accounts[Game.PlayerState.ALLIANCE]!.income) + "$"
+        amountLabel.text = "$" + String(game.accounts[Game.PlayerState.ALLIANCE]!.amount)
+    }
+    
     private func addListeners() {
         for cell in cells {
             let gesture = UITapGestureRecognizer(target: self, action: #selector(BoardViewController.selectCell))
@@ -114,9 +126,7 @@ class BoardViewController: UIViewController {
             product.addGestureRecognizer(gesture)
         }
     }
-    
 }
-
 
 extension BoardViewController: GameDelegate {
     func updateBoard() {

@@ -33,6 +33,6 @@ class Advertisement : Card {
     }
     
     override func use(user: Game.PlayerState, game: Game) -> Bool {
-        return false
+        return true
     }
 }

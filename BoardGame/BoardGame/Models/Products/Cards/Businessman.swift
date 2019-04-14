@@ -33,9 +33,7 @@ class Businessman : Card {
     }
     
     override func use(user: Game.PlayerState, game: Game) -> Bool {
-        print("income before use: " + String(describing: game.accounts[user]?.income))
         game.accounts[user]?.income += step
-        print("income before use: " + String(describing: game.accounts[user]?.income))
         return true
     }
 }

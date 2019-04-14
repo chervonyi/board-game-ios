@@ -20,13 +20,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lc-DK-CEh">
-                                <rect key="frame" x="330.66666666666669" y="54" width="34.333333333333314" height="24"/>
+                                <rect key="frame" x="320.66666666666669" y="54" width="34.333333333333314" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+2$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pro-qo-7QO">
-                                <rect key="frame" x="10" y="54" width="36.666666666666664" height="24"/>
+                                <rect key="frame" x="19.999999999999996" y="54" width="36.666666666666657" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -503,16 +503,18 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ee8-rk-cxW" secondAttribute="bottom" id="K3f-P2-A39"/>
                             <constraint firstItem="6Lc-DK-CEh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Sto-HM-hX3"/>
                             <constraint firstItem="xCP-Bq-gIP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YOA-6y-IYr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Lc-DK-CEh" secondAttribute="trailing" constant="10" id="bJM-0I-L7T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Lc-DK-CEh" secondAttribute="trailing" constant="20" id="bJM-0I-L7T"/>
                             <constraint firstItem="pro-qo-7QO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="cjO-41-kdE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ee8-rk-cxW" secondAttribute="trailing" constant="50" id="dNe-yi-fMp"/>
-                            <constraint firstItem="pro-qo-7QO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ktJ-dK-IAn"/>
+                            <constraint firstItem="pro-qo-7QO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ktJ-dK-IAn"/>
                             <constraint firstItem="ee8-rk-cxW" firstAttribute="top" secondItem="xCP-Bq-gIP" secondAttribute="bottom" constant="10" id="m0t-XM-xke"/>
                             <constraint firstItem="ee8-rk-cxW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="wtd-iu-uTt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="amountLabel" destination="6Lc-DK-CEh" id="c4a-Zs-gi7"/>
+                        <outlet property="incomeLabel" destination="pro-qo-7QO" id="uIE-XC-oVy"/>
                         <outletCollection property="cells" destination="aqW-gC-lhV" collectionClass="NSMutableArray" id="m4I-73-ibD"/>
                         <outletCollection property="cells" destination="EBd-cW-Vgm" collectionClass="NSMutableArray" id="amS-f3-yet"/>
                         <outletCollection property="cells" destination="xx9-Tu-eSp" collectionClass="NSMutableArray" id="COp-jv-YlN"/>

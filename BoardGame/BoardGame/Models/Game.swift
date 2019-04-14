@@ -52,7 +52,7 @@ class Game {
                 // Buy figure and replace it on the board
                 
                 let piece = shop.buy(product: _selectedProduct) as! Figure
-                // TODO - change amount
+                accounts[.ALLIANCE]!.amount -= piece.cost
                 cell.set(figure: piece, owner: PlayerState.ALLIANCE)
                 
                 endTurn()
@@ -81,9 +81,7 @@ class Game {
             }
         }
         
-        get {
-            return _selectedCell
-        }
+        get { return _selectedCell }
     }
     
     var selectedProduct: Int {
@@ -92,9 +90,8 @@ class Game {
             
             removeAnySelection()
             
-            // TODO - replace '100' with real user's amount of money
-            if shop.canBuy(product: newValue, with: 100) {
-                // User has enough money to buy selected product
+            // Check if user has enough money to buy selected product
+            if shop.canBuy(product: newValue, with: accounts[PlayerState.ALLIANCE]!.amount) {
                 
                 // Find out if selected product is a piece or a card
                 if shop.cart[newValue].isFigure {
@@ -106,16 +103,14 @@ class Game {
                 } else {
                     
                     let card = shop.buy(product: newValue) as! Card
-                    // TODO - Change amount
+                    accounts[.ALLIANCE]!.amount -= card.cost
                     if card.use(user: Game.PlayerState.ALLIANCE, game: self) {
                         endTurn()
                     }
                 }
             }
         }
-        get {
-            return _selectedProduct
-        }
+        get { return _selectedProduct }
     }
     
     // CONSTRUCTOR
@@ -161,6 +156,8 @@ class Game {
     }
     
     private func endTurn() {
+        accounts[turn]?.round()
+        
         if turn == PlayerState.ALLIANCE {
             turn = .ENEMY
             makeBotMove()
