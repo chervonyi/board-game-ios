@@ -10,9 +10,11 @@ import Foundation
 
 class Businessman : Card {
     
+    let step = 1
+    
     override var information: String! {
         get {
-            return "Add +1$ for every subsequent move for $" + String(cost)
+            return "Add +" + String(step) + "$ for every subsequent move for $" + String(cost)
         }
         set { }
     }
@@ -31,8 +33,9 @@ class Businessman : Card {
     }
     
     override func use(user: Game.PlayerState, game: Game) -> Bool {
-        
-        // TODO - Realize this method
+        print("income before use: " + String(describing: game.accounts[user]?.income))
+        game.accounts[user]?.income += step
+        print("income before use: " + String(describing: game.accounts[user]?.income))
         return true
     }
 }
