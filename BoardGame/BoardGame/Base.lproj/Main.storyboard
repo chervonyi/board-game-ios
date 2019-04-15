@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qgg-bs-WwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1034" y="37"/>
+            <point key="canvasLocation" x="-777" y="37"/>
         </scene>
         <!--Board View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -645,8 +645,57 @@
             </objects>
             <point key="canvasLocation" x="36" y="36.945812807881772"/>
         </scene>
+        <!--End View Controller-->
+        <scene sceneID="zgU-H0-Y7N">
+            <objects>
+                <viewController id="SGL-Hi-eIt" customClass="EndViewController" customModule="BoardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bo-Tf-fLK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU LOSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0D-e6-VC1">
+                                <rect key="frame" x="105.66666666666667" y="335" width="163.66666666666663" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J06-Hk-2mz">
+                                <rect key="frame" x="137.66666666666666" y="441" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="e4g-7N-qdE"/>
+                                </constraints>
+                                <state key="normal" title="restart">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickRestart:" destination="SGL-Hi-eIt" eventType="touchUpInside" id="9NC-R3-xDb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n0D-e6-VC1" firstAttribute="centerY" secondItem="8bo-Tf-fLK" secondAttribute="centerY" constant="-50" id="2Js-Ke-K1B"/>
+                            <constraint firstItem="J06-Hk-2mz" firstAttribute="centerY" secondItem="8bo-Tf-fLK" secondAttribute="centerY" constant="50" id="C8a-TO-l1R"/>
+                            <constraint firstItem="J06-Hk-2mz" firstAttribute="centerX" secondItem="8bo-Tf-fLK" secondAttribute="centerX" id="lUW-xA-t6E"/>
+                            <constraint firstItem="n0D-e6-VC1" firstAttribute="centerX" secondItem="8bo-Tf-fLK" secondAttribute="centerX" id="vJU-kF-ahY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w0M-JA-cvv"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonRestart" destination="J06-Hk-2mz" id="tSN-ty-zCX"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="Restart" id="JIe-Kx-Oo8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r0Z-KJ-iHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="37"/>
+        </scene>
     </scenes>
     <resources>
         <image name="logo" width="1024" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JIe-Kx-Oo8"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -25,6 +25,7 @@
 		DA2D1E282262A98E000558C4 /* KillRandomEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E272262A98E000558C4 /* KillRandomEnemy.swift */; };
 		DA2D1E2A2262A9D3000558C4 /* NewShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2D1E292262A9D3000558C4 /* NewShop.swift */; };
 		DA65254622654A0F00206D54 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65254522654A0F00206D54 /* MenuViewController.swift */; };
+		DA65254822654CCD00206D54 /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA65254722654CCD00206D54 /* EndViewController.swift */; };
 		DA756CEB2260F4610025D3CF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CEA2260F4610025D3CF /* Game.swift */; };
 		DA756CED2260F4C10025D3CF /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CEC2260F4C10025D3CF /* Cell.swift */; };
 		DA756CF12260FB730025D3CF /* Figure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA756CF02260FB730025D3CF /* Figure.swift */; };
@@ -72,6 +73,7 @@
 		DA2D1E272262A98E000558C4 /* KillRandomEnemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KillRandomEnemy.swift; sourceTree = "<group>"; };
 		DA2D1E292262A9D3000558C4 /* NewShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewShop.swift; sourceTree = "<group>"; };
 		DA65254522654A0F00206D54 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		DA65254722654CCD00206D54 /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
 		DA756CEA2260F4610025D3CF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		DA756CEC2260F4C10025D3CF /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		DA756CF02260FB730025D3CF /* Figure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Figure.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				DA0A0600225FC04300FAA30D /* CellView.swift */,
 				DA2D1E16226240C4000558C4 /* ProductView.swift */,
 				DA65254522654A0F00206D54 /* MenuViewController.swift */,
+				DA65254722654CCD00206D54 /* EndViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				DA756CED2260F4C10025D3CF /* Cell.swift in Sources */,
 				DA756CFD22612B460025D3CF /* Predator.swift in Sources */,
 				DA756CF922612AF70025D3CF /* Stone.swift in Sources */,
+				DA65254822654CCD00206D54 /* EndViewController.swift in Sources */,
 				DA2D1E17226240C4000558C4 /* ProductView.swift in Sources */,
 				DA756CF722612ABA0025D3CF /* Source.swift in Sources */,
 				DA0A0601225FC04300FAA30D /* CellView.swift in Sources */,
