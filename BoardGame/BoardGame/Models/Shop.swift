@@ -43,6 +43,10 @@ class Shop {
         return cart[position].cost <= amount
     }
     
+    func canBuy(product: Product, with amount: Int) -> Bool {
+        return product.cost <= amount
+    }
+    
     func buy(product position: Int) -> Product {
         let boughtProduct = cart[position]
         cart[position] = nextProduct()

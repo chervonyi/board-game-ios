@@ -143,14 +143,15 @@ class Game {
     }
     
     private func makeBotMove() {
-        let botMove = bot.getMove(board: board)
-        
-        if botMove.from == -1 {
-            endTurn()
-            return
-        }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+            let botMove = self.bot.getMove(game: self)
+            
+            if botMove.from == -1 {
+                self.endTurn()
+                return
+            }
+            
             self.move(from: botMove.from, to: botMove.to)
         })
     }

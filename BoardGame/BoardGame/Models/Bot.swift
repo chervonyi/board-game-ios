@@ -10,20 +10,58 @@ import Foundation
 
 class Bot {
     
-    func getMove(board: [Cell]) -> Move {
+    private var shop = Shop()
+    
+    func getMove(game: Game) -> Move {
         
         // Get random number from 0 to 99 to make prediction of bot action
         let prediction = 100.random
         
         if prediction > 40 {
             // 60% chance to make the best move
-            return getBestMove(board: board)
+            return getBestMove(board: game.board)
         } else if prediction > 30 {
-            // 10% change to make a random move
-            return getRandomMove(board: board)
-        } // Else - TODO -  buy a random product
+            // 10% chance to make a random move
+            return getRandomMove(board: game.board)
+        } else if buyRandomProduct(game: game) {
+            // 30% chance to buy a random product from own shop
+            return Move(from: -1, to: -1)
+        }
         
-        return getBestMove(board: board)
+        // If product could not be bought - make the best move
+        return getBestMove(board: game.board)
+    }
+    
+    
+    func buyRandomProduct(game: Game) -> Bool {
+        
+        // Get list of products that bot could buy
+        var avaialbelProducts = [Int]()
+        
+        for i in shop.cart.indices {
+            if shop.canBuy(product: i, with: game.accounts[Game.PlayerState.ENEMY]!.amount) {
+                avaialbelProducts.append(i)
+            }
+        }
+        
+        if avaialbelProducts.count == 0 { return false }
+        
+        guard let randomPosition = game.bases[Game.PlayerState.ENEMY]?.getRandomFreeCell(board: game.board) else {
+            return false
+        }
+        
+        let id = avaialbelProducts.first!
+        if shop.cart[id].isFigure {
+            let figure = shop.buy(product: id) as! Figure
+            game.accounts[Game.PlayerState.ENEMY]!.amount -= figure.cost
+            game.board[randomPosition].set(figure: figure, owner: Game.PlayerState.ENEMY)
+        } else {
+            let card = shop.buy(product: id) as! Card
+            game.accounts[Game.PlayerState.ENEMY]!.amount -= card.cost
+            return card.use(user: Game.PlayerState.ENEMY, game: game)
+        }
+        
+        return true
     }
     
     func getRandomMove(board: [Cell]) -> Move {

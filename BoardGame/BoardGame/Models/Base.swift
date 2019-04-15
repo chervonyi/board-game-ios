@@ -43,11 +43,11 @@ class Base {
         return freeCells
     }
 
-    func getRandomFreeCell(board: [Cell]) -> Int! {
+    func getRandomFreeCell(board: [Cell]) -> Int? {
         let freeCells = getFreeCells(board: board)
         
         if freeCells.count == 0 {
-            return -1
+            return nil
         }
         
         return freeCells[freeCells.count.random]
