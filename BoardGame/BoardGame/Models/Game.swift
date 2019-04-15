@@ -30,7 +30,7 @@ class Game {
     private var _selectedProduct = -1
     private var turn = PlayerState.ALLIANCE
     private var bot = Bot()
-    var shop = Shop()
+    var shop = Shop(owner: PlayerState.ALLIANCE)
     
     weak var delegate: GameDelegate?
     
@@ -143,7 +143,6 @@ class Game {
     }
     
     private func makeBotMove() {
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
             let botMove = self.bot.getMove(game: self)
             

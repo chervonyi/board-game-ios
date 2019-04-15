@@ -20,7 +20,7 @@ class Shop {
         .STONE,
         .PREDATOR,
     
-    // Cards:
+        // Cards:
         .ADVERTISEMENT,
         .BUSINESSMAN,
         .CONTROLL_RANDOM_ENEMY,
@@ -29,9 +29,26 @@ class Shop {
         .NEW_SHOP
     ]
     
+    private var availabelProductsForBot: [Product.Kind] = [
+        // Figures:
+        .SOURCE,
+        .SOLDIER,
+        .MASTER,
+        .STONE,
+        .PREDATOR,
+        
+        // Cards:
+        .CONTROLL_RANDOM_ENEMY,
+        .CREATE_RANDOM_FIGURE,
+        .KILL_RANDOM_ENEMY
+    ]
+    
+    private let owner: Game.PlayerState
+    
     let PRODUCT_COUNT = 3
     
-    init() {
+    init(owner: Game.PlayerState) {
+        self.owner = owner
         
         // Fill up cart with products
         for _ in 0..<PRODUCT_COUNT {
@@ -54,7 +71,9 @@ class Shop {
     }
     
     private func nextProduct() -> Product {
-        return availabelProducts[availabelProducts.count.random].product
+        return owner == Game.PlayerState.ALLIANCE
+            ? availabelProducts[availabelProducts.count.random].product
+            : availabelProductsForBot[availabelProductsForBot.count.random].product
     }
     
 }

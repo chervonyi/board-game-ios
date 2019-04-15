@@ -31,7 +31,7 @@ class NewShop : Card {
     }
     
     override func use(user: Game.PlayerState, game: Game) -> Bool {
-        game.shop = Shop()
+        game.shop = Shop(owner: Game.PlayerState.ALLIANCE)
         return true
     }
 }

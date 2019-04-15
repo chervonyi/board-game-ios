@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Jj-Uy-Qh0">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,74 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="gNk-Wz-Np2">
+            <objects>
+                <viewController id="4Jj-Uy-Qh0" customClass="MenuViewController" customModule="BoardGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ull-1K-9rb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="HgD-ZV-Smq">
+                                <rect key="frame" x="50" y="242" width="275" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="DBH-nw-4Ox"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jd6-05-ZmU">
+                                <rect key="frame" x="132.66666666666666" y="461" width="110" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQe-V4-N73">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
+                                        <color key="backgroundColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="play">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onClickPlay:" destination="4Jj-Uy-Qh0" eventType="touchUpInside" id="ceF-1A-p2g"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jM-E9-Aht">
+                                        <rect key="frame" x="0.0" y="50" width="110" height="30"/>
+                                        <color key="backgroundColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="multiplayer">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSN-uo-nSc">
+                                        <rect key="frame" x="0.0" y="100" width="110" height="30"/>
+                                        <color key="backgroundColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="turorial">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="dpU-2w-xcj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HgD-ZV-Smq" firstAttribute="leading" secondItem="lTi-ty-j2Z" secondAttribute="leading" constant="50" id="2ZL-sB-EfF"/>
+                            <constraint firstItem="jd6-05-ZmU" firstAttribute="centerY" secondItem="Ull-1K-9rb" secondAttribute="centerY" constant="120" id="Afi-Lg-HhE"/>
+                            <constraint firstItem="HgD-ZV-Smq" firstAttribute="centerY" secondItem="Ull-1K-9rb" secondAttribute="centerY" constant="-100" id="Clo-pT-KlR"/>
+                            <constraint firstItem="lTi-ty-j2Z" firstAttribute="trailing" secondItem="HgD-ZV-Smq" secondAttribute="trailing" constant="50" id="agN-Mv-HwD"/>
+                            <constraint firstItem="jd6-05-ZmU" firstAttribute="centerX" secondItem="Ull-1K-9rb" secondAttribute="centerX" id="jUB-qc-tMJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lTi-ty-j2Z"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonMultiplayer" destination="8jM-E9-Aht" id="psd-AG-L2U"/>
+                        <outlet property="buttonPlay" destination="gQe-V4-N73" id="Nhk-xd-0BI"/>
+                        <outlet property="buttonTutorial" destination="BSN-uo-nSc" id="0dH-aN-vHm"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toPlay" id="xqN-gJ-dyg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qgg-bs-WwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1034" y="37"/>
+        </scene>
         <!--Board View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -578,4 +646,7 @@
             <point key="canvasLocation" x="36" y="36.945812807881772"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="1024" height="512"/>
+    </resources>
 </document>

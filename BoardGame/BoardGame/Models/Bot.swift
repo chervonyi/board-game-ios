@@ -10,7 +10,7 @@ import Foundation
 
 class Bot {
     
-    private var shop = Shop()
+    private var shop = Shop(owner: Game.PlayerState.ENEMY)
     
     func getMove(game: Game) -> Move {
         
