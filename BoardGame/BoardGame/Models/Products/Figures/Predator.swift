@@ -14,6 +14,7 @@ class Predator : Figure {
         super.init()
         
         cost = 4
+        priority = 40
         
         ableToMove = true
         ableToFight = true

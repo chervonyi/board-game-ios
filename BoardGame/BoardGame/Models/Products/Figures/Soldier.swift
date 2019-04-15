@@ -14,6 +14,7 @@ class Soldier : Figure {
         super.init()
         
         cost = 10
+        priority = 50
         
         ableToMove = true
         ableToFight = true

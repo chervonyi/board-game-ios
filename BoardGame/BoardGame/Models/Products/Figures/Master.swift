@@ -15,6 +15,7 @@ class Master : Figure {
         super.init()
         
         cost = 16
+        priority = 70
         
         ableToMove = true
         ableToFight = true

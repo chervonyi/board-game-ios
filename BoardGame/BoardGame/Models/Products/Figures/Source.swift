@@ -14,6 +14,7 @@ class Source : Figure {
         super.init()
         
         cost = 5
+        priority = 1000
         
         ableToMove = false
         ableToFight = false

@@ -22,6 +22,8 @@ class  Figure : Product {
     
     var redFigureIcon: String! = nil
     
+    var priority: Int! = nil
+    
     func getAvailableCellsToMove(from position: Int) -> [Int] {
         return [Int]()
     }

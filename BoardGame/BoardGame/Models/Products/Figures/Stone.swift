@@ -14,6 +14,7 @@ class Stone : Figure {
         super.init()
         
         cost = 6
+        priority = 40
         
         ableToMove = true
         ableToFight = true
