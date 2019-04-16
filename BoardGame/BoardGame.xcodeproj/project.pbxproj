@@ -500,7 +500,7 @@
 		DA0A05F7225FAE0B00FAA30D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H4HP38Z7LW;
 				INFOPLIST_FILE = BoardGame/Info.plist;
@@ -515,7 +515,7 @@
 		DA0A05F8225FAE0B00FAA30D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H4HP38Z7LW;
 				INFOPLIST_FILE = BoardGame/Info.plist;
