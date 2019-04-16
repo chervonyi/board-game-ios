@@ -10,11 +10,20 @@ import UIKit
 
 class EndViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var buttonRestart: UIButton!
+    
+    var userWon = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if userWon {
+            label.text = "YOU WON"
+        } else {
+            label.text = "YOU LOSE"
+        }
+        
         buttonRestart.layer.cornerRadius = 15
         buttonRestart.layer.masksToBounds = true
     }

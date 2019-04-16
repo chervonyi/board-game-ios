@@ -639,6 +639,7 @@
                         <outletCollection property="prices" destination="407-qq-oDR" collectionClass="NSMutableArray" id="URW-lm-XZ9"/>
                         <outletCollection property="prices" destination="I7i-yc-Npd" collectionClass="NSMutableArray" id="ZRY-pK-x6m"/>
                         <outletCollection property="prices" destination="6nl-1n-oS2" collectionClass="NSMutableArray" id="sFK-lW-NnB"/>
+                        <segue destination="SGL-Hi-eIt" kind="show" identifier="end_of_game" id="rfU-WJ-Ket"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -684,6 +685,7 @@
                     </view>
                     <connections>
                         <outlet property="buttonRestart" destination="J06-Hk-2mz" id="tSN-ty-zCX"/>
+                        <outlet property="label" destination="n0D-e6-VC1" id="Daz-cZ-DcX"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="Restart" id="JIe-Kx-Oo8"/>
                     </connections>
                 </viewController>

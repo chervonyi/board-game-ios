@@ -45,7 +45,27 @@ class BoardViewController: UIViewController {
     @objc func selectCell(sender: UITapGestureRecognizer) {
         let tag = sender.view?.tag
         game.selectedCell = tag!
+        
         updateAll()
+        
+        checkOnEndGame()
+    }
+    
+    func checkOnEndGame() {
+        if !game.isRunning {
+            performSegue(withIdentifier: "end_of_game", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! EndViewController
+        
+        if game.winner == Game.PlayerState.ALLIANCE {
+            destinationVC.userWon = true
+        } else {
+            destinationVC.userWon = false
+        }
+        
     }
     
     @objc func selectProduct(sender: UITapGestureRecognizer) {
@@ -131,5 +151,6 @@ class BoardViewController: UIViewController {
 extension BoardViewController: GameDelegate {
     func updateBoard() {
         updateBoardView()
+        checkOnEndGame()
     }
 }

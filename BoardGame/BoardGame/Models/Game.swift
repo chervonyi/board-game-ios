@@ -31,6 +31,8 @@ class Game {
     private var turn = PlayerState.ALLIANCE
     private var bot = Bot()
     var shop = Shop(owner: PlayerState.ALLIANCE)
+    var isRunning = true
+    var winner: PlayerState? = nil
     
     weak var delegate: GameDelegate?
     
@@ -62,7 +64,7 @@ class Game {
                 
             } else if _selectedCell != -1 && cell.isHighlighted {
                 // Move figure
-                if cell.isEmpty || (cell.owner == PlayerState.ENEMY && cell.occupation!.ableToFight) {
+                if cell.isEmpty || (cell.owner == PlayerState.ENEMY && board[_selectedCell].occupation!.ableToFight) {
                     move(from: _selectedCell, to: newValue)
                     removeAnySelection()
                     return
@@ -128,12 +130,14 @@ class Game {
         
         let cellFrom = board[from]
         let cellTo = board[to]
-        
-        if !cellTo.isEmpty || cellFrom.owner != cellTo.owner {
+        if !cellTo.isEmpty || cellFrom.owner == cellTo.owner?.reverse {
             if cellTo.isEndingFigure {
-                // TODO - end of game
+                // End game
+                isRunning = false
+                winner = cellFrom.owner
             } else {
-                // TODO - get reward for a destroy
+                // Reward player for destroy a piece
+                accounts[cellFrom.owner!]!.amount += cellTo.occupation!.cost
             }
         }
         
